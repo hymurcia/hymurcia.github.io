@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 /* VARIABLES */
 :root {
   --bg: #fafafa;
@@ -23,19 +21,11 @@ body {
   color: var(--text);
   transition: background 0.3s, color 0.3s;
   scroll-behavior: smooth;
-=======
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fafafa;
-  color: #222;
->>>>>>> main
 }
 
 header {
   display: flex;
   justify-content: space-between;
-<<<<<<< HEAD
   padding: 20px 40px;
   position: sticky;
   top: 0;
@@ -144,65 +134,16 @@ footer {
   padding: 25px;
   background: var(--card);
   border-top: 1px solid #ddd;
-=======
-  padding: 20px;
-  background: white;
-  border-bottom: 1px solid #eee;
+}
+/* TYPING EFFECT */
+.typing-text::after {
+    content: '|'; /* El cursor */
+    display: inline-block;
+    animation: blink 0.7s infinite;
 }
 
-header .logo {
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #444;
-}
-
-.hero {
-  padding: 100px 20px;
-  text-align: center;
-  background: #ffffff;
-}
-
-.hero .btn {
-  padding: 12px 20px;
-  background: #536dfe;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-.section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.skills-grid, .projects-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #eee;
-}
-
-.card .links a {
-  margin-right: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  background: white;
-  border-top: 1px solid #eee;
->>>>>>> main
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
