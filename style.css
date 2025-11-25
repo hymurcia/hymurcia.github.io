@@ -1,46 +1,57 @@
 /* VARIABLES */
 /* VARIABLES */
+/* VARIABLES */
 :root {
- --bg: #fafafa;
- --text: #222;
- --card: #fff;
- --accent: #536dfe;
- --glass-shadow: rgba(0, 0, 0, 0.05); /* <-- Asegúrate que todas las líneas terminen en punto y coma */
+    --bg: #fafafa;
+    --text-color: #222; /* CAMBIO: De --text a --text-color para el bloque de skills */
+    --card-bg: #fff; /* CAMBIO: De --card a --card-bg para el bloque de skills */
+    --primary-color: #0066ff; /* AÑADIDO: Color primario (azul) */
+    --border-color: #eee; /* AÑADIDO: Color del borde */
+    --glass-shadow: rgba(0, 0, 0, 0.05);
+    
+    /* Variables de la tarjeta híbrida */
+    --primary-color-faded: rgba(0, 102, 255, 0.3); /* Ajustado a 0.3 para la línea divisoria */
+    --primary-color-dark: #0047b3; /* No se usa en el h3 final, pero se mantiene */
+    --hover-bg: rgba(0, 0, 0, 0.05); 
+    --skill-icon-bg: rgba(255, 255, 255, 0.9); /* Fondo del icono */
 }
 
 body.dark {
- --bg: #0d1117; 
- --text: #c9d1d9;
- --card: rgba(30, 30, 30, 0.5); 
- --accent: #7b9cff;
- --glass-shadow: rgba(255, 255, 255, 0.05); /* <-- ¡CRÍTICO! Esta línea debe tener ; */
+    --bg: #0d1117; 
+    --text-color: #c9d1d9;
+    --card-bg: #161b22; /* Color oscuro sólido para las tarjetas de skills */
+    --primary-color: #7b9cff;
+    --border-color: #30363d;
+    --glass-shadow: rgba(255, 255, 255, 0.05); 
+    --primary-color-faded: rgba(123, 156, 255, 0.3); /* Ajuste Dark Mode */
+    --hover-bg: rgba(255, 255, 255, 0.05);
+    --skill-icon-bg: rgba(255, 255, 255, 0.1); /* Fondo del icono en Dark Mode */
 }
 
 /* GLOBAL */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: background 0.3s, color 0.3s;
-  scroll-behavior: smooth;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text-color); /* CORREGIDO: De --text a --text-color */
+    transition: background 0.3s, color 0.3s;
+    scroll-behavior: smooth;
 }
-
 header {
- display: flex;
- justify-content: space-between;
- padding: 20px 40px;
- position: sticky;
- top: 0;
- background: var(--card); /* Usa la variable semi-transparente */
- border-bottom: 1px solid var(--glass-shadow); /* Borde sutil */
- z-index: 10;
- transition: background 0.3s, border 0.3s; /* <-- Verifica el ; aquí */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    background: var(--card-bg); /* CORREGIDO: Usar --card-bg */
+    border-bottom: 1px solid var(--border-color); /* CORREGIDO: Usar --border-color */
+    z-index: 10;
+    transition: background 0.3s, border 0.3s; 
 }
 
 body.dark header {
-    backdrop-filter: blur(10px); /* <-- Verifica el ; aquí */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* <-- Verifica el ; aquí */
+    backdrop-filter: blur(10px); /* ¡Semicolon OK! */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ¡Semicolon OK! */
 }
 
 #mode-toggle {
@@ -77,23 +88,6 @@ body.dark header {
 }
 
 /* SKILLS */
-.skills-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.skill-card {
-  background: var(--card);
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid var(--glass-shadow);
-  transition: 0.3s;
-}
-body.dark .skill-card {
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.1); /* <-- Verifica el ; aquí */
-}
 
 .skill-card:hover {
   transform: translateY(-5px);
@@ -194,4 +188,121 @@ footer {
 .controls {
     display: flex;
     align-items: center;
+}
+
+
+/* =========================================
+   ESTILOS HÍBRIDOS PARA LA SECCIÓN DE SKILLS (Compacto y Flotante)
+   ========================================= */
+
+/* 1. DISTRIBUCIÓN PRINCIPAL (4x + 2x) */
+.skills-grid {
+    display: grid;
+    /* Distribución que asegura 4 categorías en pantallas grandes */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; /* Espacio entre las tarjetas/grupos */
+    margin: 40px 0;
+}
+
+/* 2. LAYOUT DE LA FILA INFERIOR */
+.bottom-row {
+    grid-column: 1 / -1; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* 3. ESTILOS DE TARJETA (Flotante) */
+.skill-category {
+    /* Fondo y borde para el look de tarjeta */
+    background: var(--card-bg); 
+    padding: 20px; 
+    border-radius: 12px;
+    /* Sombra para el efecto flotante */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    transition: all 0.4s ease;
+    border: 1px solid var(--border-color);
+    margin-bottom: 0; /* Asegurar que no haya margen extra */
+}
+
+.skill-category:hover {
+    transform: translateY(-8px); /* Efecto de elevación */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
+}
+
+/* TÍTULOS DE CATEGORÍA (Limpio y alineado en la tarjeta) */
+.skill-category h3 {
+    text-align: left; 
+    margin: 0 0 15px 0; /* Separación debajo del título */
+    padding-bottom: 5px; 
+    font-size: 1.5rem; 
+    color: var(--primary-color); 
+    /* Línea limpia como separador visual */
+    border-bottom: 2px solid var(--primary-color-faded, rgba(0, 102, 255, 0.3)); 
+    display: block; 
+}
+
+/* CONTENEDOR DE ICONOS */
+.icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espaciado ajustado para el contenedor */
+    justify-content: flex-start; 
+    padding: 10px 0 0 0;
+}
+
+.icon-list figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px; 
+    transition: all 0.2s ease;
+}
+
+.icon-list figure:hover {
+    transform: scale(1.1); /* Hover más sutil dentro de la tarjeta */
+    background: var(--hover-bg, rgba(0, 0, 0, 0.05)); 
+    border-radius: 8px;
+}
+
+
+/* TAMAÑO Y RESALTADO DE ICONOS IMG */
+.icon-list img {
+    width: 60px !important; /* Ligeramente más pequeños para caber mejor */
+    height: 60px !important;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(0,0,0,0.4)); 
+    transition: all 0.3s ease;
+    background: var(--skill-icon-bg, rgba(255, 255, 255, 0.9)); 
+    padding: 6px; 
+    border-radius: 12px; 
+}
+
+.icon-list figure:hover img {
+    transform: scale(1.05); 
+    filter: drop-shadow(0 0 12px rgba(0,0,0,0.7));
+}
+
+.icon-list figcaption {
+    margin-top: 6px;
+    font-size: 0.8rem; 
+    font-weight: 600; 
+    color: var(--text-color); 
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Estilo para los iconos de texto (color-fallback) */
+.tech-icon.color-fallback {
+    width: 60px;
+    height: 60px;
+    font-size: 1.3rem;
+    filter: drop-shadow(0 0 8px rgba(0,0,0,0.4)); 
+}
+
+/* Para PNGs */
+.icon-list img[src$=".png"] {
+    background: transparent;
+    padding: 2px;
+    border-radius: 6px;
 }
