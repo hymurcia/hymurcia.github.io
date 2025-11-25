@@ -1,271 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Hernan Murcia</title>
-=======
-=======
->>>>>>> main
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hernán Murcia - Portafolio</title>
+<title data-lang-key="pageTitle">Hernán Murcia - Portafolio</title>
 <link rel="stylesheet" href="style.css">
-<<<<<<< HEAD
-<script defer src="script.js"></script>
->>>>>>> Stashed changes
-=======
->>>>>>> main
+<script type="module" defer src="script.js"></script>
 </head>
 
 <body>
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    <h1>Hola, soy Hernan Murcia</h1>
-    <p>Bienvenido a mi portafolio web. Construido con GitHub Pages.</p>
-=======
 
 <header>
-  <h1 class="logo">HERNÁN MURCIA</h1>
+  <h1 class="logo" data-lang-key="name">HERNÁN MURCIA</h1>
 
-=======
+  <nav>
+    <a href="#about" data-lang-key="navAbout">Sobre mí</a>
+    <a href="#skills" data-lang-key="navSkills">Habilidades</a>
+    <a href="#projects" data-lang-key="navProjects">Proyectos</a>
+    <a href="#experience" data-lang-key="navExperience">Experiencia</a>
+    <a href="#contact" data-lang-key="navContact">Contacto</a>
+  </nav>
 
-<header>
-  <h1 class="logo">HERNÁN MURCIA</h1>
->>>>>>> main
-  <nav>
-    <a href="#about">Sobre mí</a>
-    <a href="#skills">Habilidades</a>
-    <a href="#projects">Proyectos</a>
-    <a href="#experience">Experiencia</a>
-    <a href="#contact">Contacto</a>
-  </nav>
-<<<<<<< HEAD
-
-  <!-- Botón modo oscuro -->
-  <button id="mode-toggle">🌙</button>
+  <div class="controls">
+    <button id="lang-toggle" data-lang="es">EN</button>
+    <button id="mode-toggle">🌙</button>
+</div>
 </header>
 
 <section class="hero fade-in">
-  <h2>Ingeniero de Sistemas | Full Stack Developer | Redes & Cloud</h2>
-  <p>Desarrollo soluciones escalables, eficientes y enfocadas en la experiencia del usuario.</p>
-  <a href="CV_Hernan_Murcia.pdf" class="btn">Descargar CV</a>
+    <img src="assets/fotos/Foto.JPG" alt="Foto de Perfil - Hernán Murcia" class="profile-pic">
+    
+<h2><span data-lang-key="heroFixedPrefix">Soy</span> <span class="typing-text"></span></h2>
+  <p data-lang-key="heroSubtitle">Desarrollo soluciones escalables, eficientes y enfocadas en la experiencia del usuario.</p>
+  
+    
+  <a href="assets\documents\CV HERNAN MURCIA 1002629999 FULL.pdf" class="btn" data-lang-key="downloadCV">Descargar CV</a>
 </section>
 
+
 <section id="about" class="section fade-in">
-  <h2>Sobre mí</h2>
-  <p>
-    Soy Ingeniero de Sistemas, Full Stack Developer y especialista en redes, cloud y soporte TI. 
-    Construyo aplicaciones web y móviles, sistemas escalables, herramientas basadas en Machine Learning 
-    y estructuras de software orientadas a eficiencia y rendimiento.
-  </p>
+  <h2 data-lang-key="aboutTitle">Sobre mí</h2>
+  <p data-lang-key="aboutContent">
+    Soy Ingeniero de Sistemas, Full Stack Developer y especialista en redes, cloud y soporte TI. 
+    Construyo aplicaciones web y móviles, sistemas escalables, herramientas basadas en Machine Learning 
+    y estructuras de software orientadas a eficiencia y rendimiento. Me caracterizo por la capacidad de 
+    resolver problemas, dar soporte eficiente, desarrollar soluciones funcionales y mantener sistemas estables y seguros.
+  </p>
 </section>
 
 <section id="skills" class="section fade-in">
-=======
-</header>
+  <h2 data-lang-key="skillsTitle">Habilidades</h2>
 
-<section class="hero">
-  <h2>Ingeniero de Sistemas | Full Stack Developer | Redes & Cloud</h2>
-  <p>Diseño, desarrollo y despliegue soluciones escalables.</p>
-  <a href="CV_Hernan_Murcia.pdf" class="btn">Descargar CV</a>
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <h3 data-lang-key="skillBackend">Backend</h3>
+      <p>Java, C#, .NET, Node.js, Express, Python, Flask, PHP</p>
+    </div>
+
+    <div class="skill-card">
+      <h3 data-lang-key="skillFrontend">Frontend</h3>
+      <p>React, JavaScript, TypeScript, Angular, Tailwind, Bootstrap</p>
+    </div>
+
+    <div class="skill-card">
+      <h3 data-lang-key="skillDatabases">Bases de Datos</h3>
+      <p>PostgreSQL, MongoDB, MySQL, MariaDB, SQL Server</p>
+    </div>
+
+    <div class="skill-card">
+      <h3 data-lang-key="skillDevOps">Cloud & DevOps</h3>
+      <p>Git, Docker, CI/CD, AWS, Azure</p>
+    </div>
+
+    <div class="skill-card">
+      <h3 data-lang-key="skillNetworks">Redes</h3>
+      <p>Mikrotik, Cisco, Cambium, LigoWave, Radioenlaces</p>
+    </div>
+
+    <div class="skill-card">
+      <h3 data-lang-key="skillMobile">Móvil & ML</h3>
+      <p>Kotlin, Android Studio, Wi-Fi Fingerprinting, k-NN</p>
+    </div>
+
+  </div>
 </section>
 
-<section id="about" class="section">
-  <h2>Sobre mí</h2>
-  <p>
-    Soy Ingeniero de Sistemas, Full Stack Developer y especialista en redes 
-    y soporte TI. Tengo experiencia en desarrollo web, mobile, cloud, 
-    machine learning aplicado y arquitectura de software. Construyo soluciones 
-    funcionales, seguras y escalables bajo metodologías ágiles.
-  </p>
-</section>
-
-<section id="skills" class="section">
->>>>>>> main
-  <h2>Habilidades</h2>
-
-  <div class="skills-grid">
-
-<<<<<<< HEAD
-    <div class="skill-card">
-      <h3>Backend</h3>
-      <p>Java, C#, .NET, Node.js, Express, Python, Flask, PHP</p>
-    </div>
-
-    <div class="skill-card">
-=======
-    <div>
-      <h3>Backend</h3>
-      <p>Java, C#, .NET, Node.js, Express.js, Python, Flask, PHP, JWT, Socket.IO</p>
-    </div>
-
-    <div>
->>>>>>> main
-      <h3>Frontend</h3>
-      <p>React, JavaScript, TypeScript, Angular, Tailwind, Bootstrap</p>
-    </div>
-
-<<<<<<< HEAD
-    <div class="skill-card">
-      <h3>Bases de Datos</h3>
-      <p>PostgreSQL, MongoDB, MySQL, MariaDB, SQL Server</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Cloud & DevOps</h3>
-      <p>Git, Docker, CI/CD, AWS, Azure</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Redes</h3>
-      <p>Mikrotik, Cisco, Cambium, LigoWave, Radioenlaces</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Móvil & ML</h3>
-      <p>Kotlin, Android Studio, Wi-Fi Fingerprinting, k-NN</p>
-=======
-    <div>
-      <h3>Bases de Datos</h3>
-      <p>PostgreSQL, PL/pgSQL, MongoDB, MySQL, MariaDB, SQL Server</p>
-    </div>
-
-    <div>
-      <h3>Cloud & DevOps</h3>
-      <p>Git, GitHub, Docker, CI/CD, AWS, Azure</p>
-    </div>
-
-    <div>
-      <h3>Redes</h3>
-      <p>Mikrotik, Cambium, Cisco, LigoWave, Radioenlaces, LAN/WAN</p>
-    </div>
-
-    <div>
-      <h3>Móvil y ML</h3>
-      <p>Kotlin, Android Studio, Wi-Fi Fingerprinting, k-NN, GA</p>
->>>>>>> main
-    </div>
-
-  </div>
-</section>
-
-<<<<<<< HEAD
 <section id="projects" class="section fade-in">
-=======
-<section id="projects" class="section">
->>>>>>> main
-  <h2>Proyectos</h2>
+  <h2 data-lang-key="projectsTitle">Proyectos</h2>
 
-  <div class="projects-grid">
+  <div class="projects-grid">
 
-<<<<<<< HEAD
-    <div class="card">
-      <h3>Plataforma Locativa BIM</h3>
-      <p>Sistema MERN para gestión locativa con roles y notificaciones en tiempo real.</p>
-=======
-    <!-- Proyecto 1 -->
-    <div class="card">
-      <h3>Plataforma Locativa BIM</h3>
-      <p>Sistema MERN para gestión de infraestructura con roles y notificaciones en tiempo real.</p>
->>>>>>> main
-      <span class="stack">Node.js · React · PostgreSQL · Socket.IO</span>
-      <div class="links">
-        <a href="#" target="_blank">GitHub</a>
-        <a href="#" target="_blank">Demo</a>
-      </div>
-    </div>
+    <div class="card">
+      <h3 data-lang-key="proj1Title">Plataforma Locativa BIM</h3>
+      <p data-lang-key="proj1Desc">Sistema MERN para gestión locativa con roles y notificaciones en tiempo real.</p>
+      <span class="stack">Node.js · React · PostgreSQL · Socket.IO</span>
+      <div class="links">
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">Demo</a>
+      </div>
+    </div>
 
-<<<<<<< HEAD
-    <div class="card">
-      <h3>IndoorWifi</h3>
-      <p>App Android de localización indoor con Wi-Fi Fingerprinting + k-NN.</p>
-      <span class="stack">Kotlin · ML · RSSI · JSON</span>
-=======
-    <!-- Proyecto 2 -->
-    <div class="card">
-      <h3>IndoorWifi</h3>
-      <p>App Android de localización indoor con Wi-Fi Fingerprinting y algoritmo k-NN.</p>
-      <span class="stack">Kotlin · ML · JSON · RSSI</span>
->>>>>>> main
-      <div class="links">
-        <a href="#" target="_blank">GitHub</a>
-      </div>
-    </div>
+    <div class="card">
+      <h3 data-lang-key="proj2Title">IndoorWifi</h3>
+      <p data-lang-key="proj2Desc">App Android de localización indoor con Wi-Fi Fingerprinting + k-NN.</p>
+      <span class="stack">Kotlin · ML · RSSI · JSON</span>
+      <div class="links">
+        <a href="#" target="_blank">GitHub</a>
+      </div>
+    </div>
 
-<<<<<<< HEAD
-    <div class="card">
-      <h3>Simulador GA</h3>
-      <p>Algoritmo Genético con backend en Python/Flask y frontend en React/Vite.</p>
-      <span class="stack">Python · React · Flask</span>
-=======
-    <!-- Proyecto 3 -->
-    <div class="card">
-      <h3>Simulador GA</h3>
-      <p>Algoritmo Genético con backend en Python y frontend en React/Vite.</p>
-      <span class="stack">Python · Flask · React</span>
->>>>>>> main
-      <div class="links">
-        <a href="#" target="_blank">GitHub</a>
-      </div>
-    </div>
+    <div class="card">
+      <h3 data-lang-key="proj3Title">Simulador GA</h3>
+      <p data-lang-key="proj3Desc">Algoritmo Genético con backend en Python/Flask y frontend en React/Vite.</p>
+      <span class="stack">Python · React · Flask</span>
+      <div class="links">
+        <a href="#" target="_blank">GitHub</a>
+      </div>
+      </div>
 
-<<<<<<< HEAD
-    <div class="card">
-      <h3>Agro Trader</h3>
-      <p>E-commerce minimalista para productores de Agraz Silvestre.</p>
-=======
-    <!-- Proyecto 4 -->
-    <div class="card">
-      <h3>Agro Trader</h3>
-      <p>E-commerce minimalista para comercialización de Agraz Silvestre.</p>
->>>>>>> main
-      <span class="stack">HTML · CSS · JS</span>
-      <div class="links">
-        <a href="#" target="_blank">GitHub</a>
-      </div>
-    </div>
+    <div class="card">
+      <h3 data-lang-key="proj4Title">Agro Trader</h3>
+      <p data-lang-key="proj4Desc">E-commerce minimalista para productores de Agraz Silvestre.</p>
+      <span class="stack">HTML · CSS · JS</span>
+      <div class="links">
+        <a href="#" target="_blank">GitHub</a>
+      </div>
+    </div>
 
-  </div>
+  </div>
 </section>
 
-<<<<<<< HEAD
 <section id="experience" class="section fade-in">
-=======
-<section id="experience" class="section">
->>>>>>> main
-  <h2>Experiencia</h2>
-  <ul>
-    <li><strong>Desarrollador Junior – MULIEVA S.A.S. (2024–2025)</strong></li>
-    <li><strong>Gestor Daviplata – Nases EST (2024–2025)</strong></li>
-    <li><strong>Técnico de Redes – IpRed Ltda (2021–2022)</strong></li>
-  </ul>
+  <h2 data-lang-key="experienceTitle">Experiencia</h2>
+  <ul>
+    <li>
+        <strong data-lang-key="expJob1Title">Desarrollador Junior</strong> – MULIEVA S.A.S. (2024–2025)
+        <p class="job-desc" data-lang-key="expJob1Desc">Participé en el desarrollo de aplicaciones web utilizando tecnologías frontend y backend, asegurando funcionalidad, rendimiento y mantenimiento del código.</p>
+    </li>
+    <li>
+        <strong data-lang-key="expJob2Title">Gestor Daviplata</strong> – Nases EST (2024–2025)
+        <p class="job-desc" data-lang-key="expJob2Desc">Acompañé usuarios en procesos de activación, validación y uso de la plataforma Daviplata. Ejecuté soporte técnico relacionado con acceso, autenticación, fallas en app y procesos digitales.</p>
+    </li>
+    <li>
+        <strong data-lang-key="expJob3Title">Técnico de Redes</strong> – IpRed Ltda (2021–2022)
+        <p class="job-desc" data-lang-key="expJob3Desc">Instalación, configuración y mantenimiento de redes inalámbricas y cableadas. Configuración de radioenlaces y equipos de telecomunicaciones (Mikrotik, Cisco, Cambium, etc.).</p>
+    </li>
+  </ul>
 </section>
 
-<<<<<<< HEAD
 <section id="contact" class="section fade-in">
-  <h2>Contacto</h2>
-  <p>Email: <a href="mailto:hyms2003@gmail.com">hyms2003@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/hernanmurcia" target="_blank">Perfil</a></p>
-  <p>GitHub: <a href="https://github.com" target="_blank">Repositorio</a></p>
-=======
-<section id="contact" class="section">
-  <h2>Contacto</h2>
-  <p>Email: <a href="mailto:hyms2003@gmail.com">hyms2003@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/hernanmurcia" target="_blank">LinkedIn</a></p>
-  <p>GitHub: <a href="https://github.com" target="_blank">GitHub</a></p>
->>>>>>> main
+  <h2 data-lang-key="contactTitle">Contacto</h2>
+  <p data-lang-key="contactEmail">Email: <a href="mailto:hyms2003@gmail.com">hyms2003@gmail.com</a></p>
+  <p data-lang-key="contactLinkedIn">LinkedIn: <a href="https://linkedin.com/in/hernanmurcia" target="_blank">Perfil</a></p>
+  <p data-lang-key="contactGitHub">GitHub: <a href="https://github.com/hymurcia/hymurcia.github.io" target="_blank">Repositorio</a></p>
 </section>
 
 <footer>
-  <p>© Hernán Murcia - 2025</p>
+  <p data-lang-key="footerText">© Hernán Murcia - 2025</p>
 </footer>
 
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> main
 </body>
 </html>
