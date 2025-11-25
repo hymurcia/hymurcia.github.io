@@ -147,3 +147,13 @@ footer {
         opacity: 0;
     }
 }
+/* PROFILE PICTURE */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Para hacerla circular */
+    object-fit: cover;
+    margin: 30px auto 0;
+    display: block;
+    border: 4px solid var(--accent); /* Un borde de color principal */
+}

@@ -11,7 +11,9 @@ export const translations = {
     navContact: { es: "Contacto", en: "Contact" },
     
     // HERO SECTION
+    heroFixedPrefix: { es: "Soy", en: "I am" },
     heroSubtitle: { 
+        
         es: "Desarrollo soluciones escalables, eficientes y enfocadas en la experiencia del usuario.", 
         en: "I develop scalable, efficient, and user-experience-focused solutions." 
     },
