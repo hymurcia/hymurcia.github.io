@@ -175,3 +175,29 @@ window.addEventListener('scroll', () => {
     cascade.appendChild(col);
   }
 
+
+  
+const hamburger = document.getElementById("hamburger");
+const sideMenu = document.getElementById("side-menu");
+const overlay = document.getElementById("overlay");
+
+hamburger.addEventListener("click", () => {
+    sideMenu.classList.toggle("open");
+    overlay.classList.toggle("active");
+});
+
+// Cerrar al hacer clic fuera
+overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("open");
+    overlay.classList.remove("active");
+});
+
+// Cerrar el menú al hacer clic en cualquier enlace del menú
+const menuLinks = document.querySelectorAll('#side-menu a');
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        sideMenu.classList.remove("open");
+        overlay.classList.remove("active");
+    });
+});
+
