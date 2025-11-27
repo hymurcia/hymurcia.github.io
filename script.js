@@ -155,3 +155,23 @@ window.addEventListener('scroll', () => {
         backToTopButton.style.opacity = '0';
     }
 });
+
+
+  // Genera columnas dinámicamente
+  const cascade = document.querySelector('.electro-cascade');
+  const numColumns = Math.floor(window.innerWidth / 60); // separación entre columnas
+
+  for (let i = 0; i < numColumns; i++) {
+    const col = document.createElement('div');
+    col.classList.add('electro-column');
+
+    // posición horizontal
+    col.style.left = `${i * 60}px`;
+
+    // duración y delay aleatorios para naturalidad
+    col.style.animationDuration = `${10 + Math.random() * 8}s`;
+    col.style.animationDelay = `${Math.random() * -15}s`;
+
+    cascade.appendChild(col);
+  }
+

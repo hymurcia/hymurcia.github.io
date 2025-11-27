@@ -3,29 +3,30 @@
 /* VARIABLES */
 :root {
     --bg: #fafafa;
-    --text-color: #222; /* CAMBIO: De --text a --text-color para el bloque de skills */
-    --card-bg: #fff; /* CAMBIO: De --card a --card-bg para el bloque de skills */
-    --primary-color: #0066ff; /* AÑADIDO: Color primario (azul) */
-    --border-color: #eee; /* AÑADIDO: Color del borde */
+    --text-color: #222; 
+    --card-bg: #fff; 
+    --primary-color: #0066ff; /* Color primario (azul) */
+    --border-color: #eee; /* Color del borde */
     --glass-shadow: rgba(0, 0, 0, 0.05);
+    --accent-blue: #1e90ff;
     
     /* Variables de la tarjeta híbrida */
-    --primary-color-faded: rgba(0, 102, 255, 0.3); /* Ajustado a 0.3 para la línea divisoria */
-    --primary-color-dark: #0047b3; /* No se usa en el h3 final, pero se mantiene */
+    --primary-color-faded: rgba(0, 102, 255, 0.3); 
+    --primary-color-dark: #0047b3; 
     --hover-bg: rgba(0, 0, 0, 0.05); 
-    --skill-icon-bg: rgba(255, 255, 255, 0.9); /* Fondo del icono */
+    --skill-icon-bg: rgba(255, 255, 255, 0.9); 
 }
 
 body.dark {
     --bg: #0d1117; 
     --text-color: #c9d1d9;
-    --card-bg: #161b22; /* Color oscuro sólido para las tarjetas de skills */
     --primary-color: #7b9cff;
     --border-color: #30363d;
     --glass-shadow: rgba(255, 255, 255, 0.05); 
-    --primary-color-faded: rgba(123, 156, 255, 0.3); /* Ajuste Dark Mode */
+    --primary-color-faded: rgba(123, 156, 255, 0.3); 
     --hover-bg: rgba(255, 255, 255, 0.05);
-    --skill-icon-bg: rgba(255, 255, 255, 0.1); /* Fondo del icono en Dark Mode */
+    --skill-icon-bg: rgba(255, 255, 255, 0.1); 
+    --card-bg: rgba(30, 30, 30, 0.9);
 }
 
 /* GLOBAL */
@@ -33,118 +34,141 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: var(--bg);
-    color: var(--text-color); /* CORREGIDO: De --text a --text-color */
+    color: var(--text-color);
     transition: background 0.3s, color 0.3s;
     scroll-behavior: smooth;
 }
+
+
+body.dark header {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+   ESTILOS MEJORADOS PARA EL HEADER (Banner Superior)
+   ========================================= */
+
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    align-items: center; 
+    padding: 15px 40px; 
     position: sticky;
     top: 0;
-    background: var(--card-bg); /* CORREGIDO: Usar --card-bg */
-    border-bottom: 1px solid var(--border-color); /* CORREGIDO: Usar --border-color */
+    background: var(--card-bg); 
+    border-bottom: 1px solid var(--border-color); 
     z-index: 10;
-    transition: background 0.3s, border 0.3s; 
+    transition: background 0.3s, border 0.3s, backdrop-filter 0.3s;
+    
+    /* Efecto Glassmorphism (Cristal) */
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
 }
 
-body.dark header {
-    backdrop-filter: blur(10px); /* ¡Semicolon OK! */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ¡Semicolon OK! */
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color); 
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* --- Navegación (Enlaces) --- */
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.2s, border-bottom 0.2s;
+    /* Efecto de línea sutil al hacer hover */
+    border-bottom: 2px solid transparent; 
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* --- Controles (EN/🌙) --- */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
 }
 
 #mode-toggle {
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%; 
+    transition: background 0.3s, color 0.3s, border 0.3s;
+    line-height: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#mode-toggle:hover {
+    background: var(--primary-color);
+    color: white; 
+    border-color: var(--primary-color);
+}
+
+
+#lang-toggle {
+    border: 1px solid var(--primary-color); 
+    background: none;
+    padding: 8px 12px;
+    border-radius: 20px; 
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    color: var(--primary-color); 
+}
+
+#lang-toggle:hover {
+    background: var(--primary-color);
+    color: var(--card-bg); 
 }
 
 .hero {
-  text-align: center;
-  padding: 120px 20px;
+    text-align: center;
+    padding: 120px 20px;
 }
 
 .btn {
-  background: var(--accent);
-  padding: 12px 20px;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s;
+    /* CORRECCIÓN: Usar una variable definida (primary-color) si 'accent' no existe */
+    background: var(--primary-color); 
+    padding: 12px 20px;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .btn:hover {
-  opacity: 0.8;
-  transform: translateY(-3px);
+    opacity: 0.8;
+    transform: translateY(-3px);
 }
 
 /* SECTIONS */
 .section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
 }
 
-/* SKILLS */
+/* SKILLS (Se elimina el selector .skill-card:hover duplicado aquí) */
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* PROJECTS */
-.projects-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-}
-
-.card {
-  background: var(--card);
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.stack {
-  display: block;
-  margin: 10px 0;
-  font-size: 14px;
-  color: var(--accent);
-}
-
-/* ANIMACIONES */
-.fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 25px;
-  background: var(--card);
-  border-top: 1px solid #ddd;
-}
 /* TYPING EFFECT */
 .typing-text::after {
-    content: '|'; /* El cursor */
+    content: '|'; 
     display: inline-block;
     animation: blink 0.7s infinite;
 }
@@ -158,30 +182,19 @@ footer {
 .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Para hacerla circular */
+    border-radius: 50%; 
     object-fit: cover;
     margin: 30px auto 0;
     display: block;
-    border: 4px solid var(--accent); /* Un borde de color principal */
-}
-/* ESTILOS ADICIONALES PARA BOTÓN DE IDIOMA Y CORRECCIÓN DE FUENTE */
-#lang-toggle {
-    /* **ELIMINA** cualquier referencia a 'Segoe UI Emoji' */
-    border: 1px solid var(--accent);
-    background: none;
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 14px; /* Un tamaño de texto normal */
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    margin-left: 10px;
-    color: var(--text);
+    /* CORRECCIÓN: Usar una variable definida (primary-color) si 'accent' no existe */
+    border: 4px solid var(--primary-color); 
 }
 
+/* ESTILOS ADICIONALES PARA BOTÓN DE IDIOMA Y CORRECCIÓN DE FUENTE */
 #lang-toggle:hover {
-    background: var(--accent);
-    color: var(--card); /* Esto no afectará el color del emoji, pero sí del fondo */
+    /* CORRECCIÓN: Usar una variable definida (primary-color) si 'accent' no existe */
+    background: var(--primary-color); 
+    color: var(--card-bg); 
 }
 
 /* Ajuste del contenedor de controles */
@@ -192,15 +205,14 @@ footer {
 
 
 /* =========================================
-   ESTILOS HÍBRIDOS PARA LA SECCIÓN DE SKILLS (Compacto y Flotante)
+   ESTILOS HÍBRIDOS PARA LA SECCIÓN DE SKILLS 
    ========================================= */
 
 /* 1. DISTRIBUCIÓN PRINCIPAL (4x + 2x) */
 .skills-grid {
     display: grid;
-    /* Distribución que asegura 4 categorías en pantallas grandes */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 30px; /* Espacio entre las tarjetas/grupos */
+    gap: 30px; 
     margin: 40px 0;
 }
 
@@ -214,30 +226,27 @@ footer {
 
 /* 3. ESTILOS DE TARJETA (Flotante) */
 .skill-category {
-    /* Fondo y borde para el look de tarjeta */
     background: var(--card-bg); 
     padding: 20px; 
     border-radius: 12px;
-    /* Sombra para el efecto flotante */
     box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
     transition: all 0.4s ease;
     border: 1px solid var(--border-color);
-    margin-bottom: 0; /* Asegurar que no haya margen extra */
+    margin-bottom: 0; 
 }
 
 .skill-category:hover {
-    transform: translateY(-8px); /* Efecto de elevación */
+    transform: translateY(-8px); 
     box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
 }
 
-/* TÍTULOS DE CATEGORÍA (Limpio y alineado en la tarjeta) */
+/* TÍTULOS DE CATEGORÍA */
 .skill-category h3 {
     text-align: left; 
-    margin: 0 0 15px 0; /* Separación debajo del título */
+    margin: 0 0 15px 0; 
     padding-bottom: 5px; 
     font-size: 1.5rem; 
     color: var(--primary-color); 
-    /* Línea limpia como separador visual */
     border-bottom: 2px solid var(--primary-color-faded, rgba(0, 102, 255, 0.3)); 
     display: block; 
 }
@@ -246,7 +255,7 @@ footer {
 .icon-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Espaciado ajustado para el contenedor */
+    gap: 15px; 
     justify-content: flex-start; 
     padding: 10px 0 0 0;
 }
@@ -260,7 +269,7 @@ footer {
 }
 
 .icon-list figure:hover {
-    transform: scale(1.1); /* Hover más sutil dentro de la tarjeta */
+    transform: scale(1.1); 
     background: var(--hover-bg, rgba(0, 0, 0, 0.05)); 
     border-radius: 8px;
 }
@@ -268,7 +277,7 @@ footer {
 
 /* TAMAÑO Y RESALTADO DE ICONOS IMG */
 .icon-list img {
-    width: 60px !important; /* Ligeramente más pequeños para caber mejor */
+    width: 60px !important; 
     height: 60px !important;
     object-fit: contain;
     filter: drop-shadow(0 0 8px rgba(0,0,0,0.4)); 
@@ -305,4 +314,607 @@ footer {
     background: transparent;
     padding: 2px;
     border-radius: 6px;
+}
+
+/* === PROYECTOS DINÁMICOS === */
+
+.projects-dynamic-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    position: relative;
+    background: var(--card-bg, #111);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    transition: transform .25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* === PREVIEW / SLIDESHOW === */
+.project-preview {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #000;
+    position: relative;
+}
+
+.project-preview.phone {
+    height: 350px;
+}
+
+/* === SLIDESHOW ADAPTATIVO === */
+
+/* === SLIDESHOW HORIZONTAL (landscape) === */
+
+.slideshow.horizontal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    --count: 1;
+    animation: slideHorizontal calc(var(--count) * 3.5s) infinite linear;
+}
+
+.slideshow.horizontal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slideHorizontal {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(-100% * (var(--count) - 1))); }
+}
+
+/* === SLIDESHOW VERTICAL (portrait / Android screenshots) === */
+
+.slideshow.vertical {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow.vertical img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    animation: fadeVertical calc(var(--count) * 3.5s) infinite;
+}
+
+.slideshow.vertical img:nth-child(1) { animation-delay: calc(0s); }
+.slideshow.vertical img:nth-child(2) { animation-delay: calc(3.5s); }
+.slideshow.vertical img:nth-child(3) { animation-delay: calc(7s); }
+.slideshow.vertical img:nth-child(4) { animation-delay: calc(10.5s); }
+/* puedes agregar más si los necesitas */
+
+@keyframes fadeVertical {
+    0%   { opacity: 1; }
+    25%  { opacity: 1; }
+    33%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+
+/* === INFO === */
+.project-info {
+    padding: 1.2rem;
+}
+
+.project-info h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.project-info p {
+    margin: .5rem 0;
+    opacity: .8;
+}
+
+.stack {
+    display: inline-block;
+    margin-bottom: .8rem;
+    background: rgba(255,255,255,0.06);
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: .85rem;
+}
+
+.links a {
+    margin-right: 12px;
+    color: var(--accent, #4ea1ff);
+    font-weight: 600;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+#contact {
+    padding-top: 2rem;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #0077ff;
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    max-width: 550px;
+    margin: auto;
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #e5e9f0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.contact-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: .3rem;
+}
+
+.contact-phone {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    margin: .6rem 0;
+    padding: .8rem 1rem;
+    background: #f5f7fa;
+    border-radius: 12px;
+    border: 1px solid #dce3ea;
+    font-size: 1rem;
+    color: #1a1a1a;
+    transition: .25s ease;
+    text-decoration: none;
+}
+
+.contact-item i {
+    font-size: 1.2rem;
+}
+
+.contact-item:hover {
+    background: #0077ff;
+    color: white;
+    border-color: #0077ff;
+}
+
+
+body.dark .contact-title {
+    color: #3ea6ff;
+}
+
+body.dark .contact-container {
+    background: #111826;
+    border: 1px solid #1f2937;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.55);
+}
+
+body.dark .contact-name {
+    color: #e6eef8;
+}
+
+body.dark .contact-phone {
+    color: #9db0c9;
+}
+
+body.dark .contact-item {
+    background: #1a2433;
+    border: 1px solid #2a3547;
+    color: #dbe7f6;
+}
+
+body.dark .contact-item:hover {
+    background: #3ea6ff;
+    color: #0b0e14;
+    border-color: #3ea6ff;
+}
+
+body.dark .whatsapp:hover {
+    background: #25D366 !important;
+    color: #0b0e14 !important;
+}
+
+body.dark .linkedin:hover {
+    background: #3ea6ff !important;
+}
+
+body.dark .github:hover {
+    background: white !important;
+    color: #0b0e14 !important;
+}
+
+body.dark .email:hover {
+    background: #61b3ff !important;
+}
+
+
+/* ============================
+   FOOTER
+   ============================ */
+
+footer.footer {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 60px;
+    border-top: 1px solid var(--border-color);
+    background: var(--footer-bg);
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+footer.footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--footer-text);
+    letter-spacing: 0.3px;
+}
+
+
+
+/* ============================================
+   EFECTO FONDO ELECTRO-CASCADE
+   Líneas + nodos tipo diagrama electrónico
+   cayendo en cascada vertical
+   ============================================ */
+
+.electro-cascade {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Permite clics en todo */
+  z-index: -9999; /* Siempre detrás */
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Cada columna */
+.electro-column {
+  position: absolute;
+  top: -150%;
+  width: 2px;
+  height: 250%;
+  opacity: 0.6;
+  animation: fall 12s linear infinite;
+}
+
+/* Líneas verticales */
+.electro-column::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 3px 60px;
+  background-repeat: repeat-y;
+  opacity: 0.65;
+}
+
+/* Nodos electrónicos */
+.electro-column::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: -2px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 
+    0 25px currentColor,
+    0 55px currentColor,
+    0 90px currentColor,
+    0 130px currentColor,
+    0 180px currentColor;
+  opacity: 0.9;
+}
+
+/* Light mode (azul técnico suave) */
+html:not(.dark) .electro-column,
+body:not(.dark) .electro-column {
+  color: rgba(35, 120, 255, 0.65);
+}
+
+html:not(.dark) .electro-column::before {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(35, 120, 255, 0.25) 0%,
+    rgba(35, 120, 255, 0.15) 50%,
+    rgba(35, 120, 255, 0.05) 100%
+  );
+}
+
+/* Dark mode (azul-neón) */
+html.dark .electro-column,
+body.dark .electro-column {
+  color: rgba(100, 180, 255, 0.85);
+}
+
+html.dark .electro-column::before {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(100, 180, 255, 0.35) 0%,
+    rgba(100, 180, 255, 0.22) 50%,
+    rgba(100, 180, 255, 0.10) 100%
+  );
+}
+
+/* CAÍDA EN CASCADA */
+@keyframes fall {
+  0% { transform: translateY(-150%); }
+  100% { transform: translateY(150%); }
+}
+
+/* ===============================
+   SECCIÓN DE EXPERIENCIA (TIMELINE)
+   =============================== */
+
+#experience {
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Línea vertical del timeline */
+#experience ul {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+}
+
+#experience ul::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    border-radius: 2px;
+    transition: background 0.3s ease;
+}
+
+/* Modo claro → línea azul suave */
+:root.light #experience ul::before {
+    background: rgba(30, 100, 255, 0.35);
+}
+
+/* Modo oscuro → línea azul neón */
+:root.dark #experience ul::before {
+    background: rgba(100, 180, 255, 0.55);
+}
+
+/* Tarjetas */
+#experience li {
+    margin-bottom: 35px;
+    padding: 18px 22px;
+    border-radius: 12px;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-left: 4px solid transparent;
+}
+
+/* Brillo lateral animado */
+#experience li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 0 18px var(--accent-glow);
+    border-left-color: var(--accent-glow);
+}
+
+/* Nodo del timeline */
+#experience li::before {
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: 22px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* Texto del título */
+#experience li strong {
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+/* Descripción */
+.job-desc {
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+/* ===== COLORES MODO CLARO ===== */
+:root.light {
+    --accent: #1f6dff;
+    --accent-glow: rgba(31, 109, 255, 0.65);
+    --card-bg: #ffffffcc;
+    --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== COLORES MODO OSCURO ===== */
+:root.dark {
+    --accent: #64b4ff;
+    --accent-glow: rgba(100, 180, 255, 0.75);
+    --card-bg: #0d1a2acc;
+    --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+
+/* === ABOUT SECTION === */
+#about {
+  position: relative;
+  padding: 3rem 2rem;
+  margin: 3rem auto;
+  border-radius: 20px;
+  max-width: 900px;
+
+  /* efecto vidrio */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+
+  /* borde futurista */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 0 15px rgba(0, 180, 255, 0.2),
+    inset 0 0 10px rgba(0, 180, 255, 0.15);
+
+  /* animación de brillo */
+  animation: borderGlow 4s ease-in-out infinite alternate;
+}
+
+/* modo claro */
+.light-mode #about {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 0 15px rgba(0, 120, 255, 0.15),
+    inset 0 0 10px rgba(0, 120, 255, 0.1);
+}
+
+/* Título */
+#about h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+
+  background: linear-gradient(90deg, #38bdf8, #3b82f6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Párrafo */
+#about p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: var(--text-color);
+  padding: 0 0.5rem;
+
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes borderGlow {
+  from {
+    box-shadow:
+      0 0 20px rgba(0, 180, 255, 0.25),
+      inset 0 0 15px rgba(0, 180, 255, 0.1);
+  }
+  to {
+    box-shadow:
+      0 0 30px rgba(0, 255, 200, 0.4),
+      inset 0 0 20px rgba(0, 255, 200, 0.2);
+  }
+}
+
+
+/* Contenedor de botones */
+.download-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Botón principal */
+.btn-download {
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #008cff, #00e1ff);
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+/* Segundo botón (versión alternativa) */
+.btn-download.alt {
+  background: linear-gradient(135deg, #00ffa3, #0affc9);
+  box-shadow: 0 0 15px rgba(0, 255, 150, 0.5);
+  border: 2px solid rgba(0, 255, 150, 0.3);
+}
+
+/* Efecto hover tech */
+.btn-download:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.6),
+    0 0 35px rgba(0, 255, 255, 0.4);
+}
+
+/* Pseudo-brillo animado que cruza el botón */
+.btn-download::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.4),
+      transparent
+  );
+  transition: 0.5s;
+}
+
+.btn-download:hover::before {
+  left: 100%;
+}
+
+/* Icono */
+.btn-download i {
+  margin-right: 8px;
+}
+
+/* Modo claro */
+.light-mode .btn-download {
+  color: #000;
+  border: 2px solid rgba(0, 0, 0, 0.15);
 }
