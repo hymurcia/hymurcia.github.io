@@ -3,24 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-lang-key="pageTitle">Hernán Murcia - Portafolio</title>
+<title data-lang-key="pageTitle" >Hernán Murcia - Portafolio</title>
     <link rel="stylesheet" href="style.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     
     <script type="module" defer src="script.js"></script>
 </head>
 
 <body>
+<div class="electro-cascade" aria-hidden="true"></div>
 
 <header>
- <h1 class="logo" data-lang-key="name">HERNÁN MURCIA</h1>
+ <h1  class="logo" data-lang-key="name" >HERNÁN MURCIA</h1>
 
  <nav>
     <a href="#about" data-lang-key="navAbout">Sobre mí</a>
+    <a href="#experience" data-lang-key="navExperience">Experiencia</a>
     <a href="#skills" data-lang-key="navSkills">Habilidades</a>
     <a href="#projects" data-lang-key="navProjects">Proyectos</a>
-    <a href="#experience" data-lang-key="navExperience">Experiencia</a>
     <a href="#contact" data-lang-key="navContact">Contacto</a>
  </nav>
 
@@ -34,12 +39,19 @@
 
 <section class="hero fade-in">
     <img src="assets/fotos/Foto.JPG" alt="Foto de Perfil - Hernán Murcia" class="profile-pic">
-    
-<h2><span data-lang-key="heroFixedPrefix">Soy</span> <span class="typing-text"></span></h2>
- <p data-lang-key="heroSubtitle">Desarrollo soluciones escalables, eficientes y enfocadas en la experiencia del usuario.</p>
- 
-    
- <a href="assets\documents\CV HERNAN MURCIA 1002629999 FULL.pdf" class="btn" data-lang-key="downloadCV">Descargar CV</a>
+
+    <h2><span data-lang-key="heroFixedPrefix">Soy</span> <span class="typing-text"></span></h2>
+    <p data-lang-key="heroSubtitle">Desarrollo soluciones escalables, eficientes y enfocadas en la experiencia del usuario.</p>
+
+    <div class="download-buttons">
+        <a href="assets/documents/CV HERNAN MURCIA 1002629999 FULL.pdf" class="btn-download" data-lang-key="downloadCV">
+            <i class="fa-solid fa-download"></i> Descargar CV (ES)
+        </a>
+
+        <a href="assets/documents/CV HERNAN MURCIA ENGLISH.pdf" class="btn-download alt" data-lang-key="downloadCVEnglish">
+            <i class="fa-solid fa-download"></i> Download CV (EN)
+        </a>
+    </div>
 </section>
 
 
@@ -53,9 +65,29 @@
   </p>
 </section>
 
+<section id="experience" class="section fade-in">
+  <h2 data-lang-key="experienceTitle">Experiencia</h2>
+  <ul>
+    <li>
+        <strong data-lang-key="expJob1Title"></strong> – 
+        <span data-lang-key="expJob1Date"></span>
+        <p class="job-desc" data-lang-key="expJob1Desc"></p>
+    </li>
+    <li>
+        <strong data-lang-key="expJob2Title"></strong> – 
+        <span data-lang-key="expJob2Date"></span>
+        <p class="job-desc" data-lang-key="expJob2Desc"></p>
+    </li>
+    <li>
+        <strong data-lang-key="expJob3Title"></strong> – 
+        <span data-lang-key="expJob3Date"></span>
+        <p class="job-desc" data-lang-key="expJob3Desc"></p>
+    </li>
+  </ul>
+</section>
+
 <section id="skills" class="section fade-in">
     <h2 data-lang-key="skillsTitle">Habilidades</h2>
-
 <div class="skills-grid">
     <div class="skill-category">
         <h3>Backend</h3>
@@ -144,76 +176,161 @@
 <section id="projects" class="section fade-in">
   <h2 data-lang-key="projectsTitle">Proyectos</h2>
 
-  <div class="projects-grid">
+<div class="projects-dynamic-gallery">
 
-    <div class="card">
-      <h3 data-lang-key="proj1Title">Plataforma Locativa BIM</h3>
-      <p data-lang-key="proj1Desc">Sistema MERN para gestión locativa con roles y notificaciones en tiempo real.</p>
-      <span class="stack">Node.js · React · PostgreSQL · Socket.IO</span>
-      <div class="links">
-        <a href="#" target="_blank">GitHub</a>
-        <a href="#" target="_blank">Demo</a>
-      </div>
-    </div>
+    <!-- CARD -->
+    <div class="project-card">
+        <div class="project-preview">
+            <div class="slideshow horizontal" style="--count: 2;">
 
-    <div class="card">
-      <h3 data-lang-key="proj2Title">IndoorWifi</h3>
-      <p data-lang-key="proj2Desc">App Android de localización indoor con Wi-Fi Fingerprinting + k-NN.</p>
-      <span class="stack">Kotlin · ML · RSSI · JSON</span>
-      <div class="links">
-        <a href="#" target="_blank">GitHub</a>
-      </div>
-    </div>
+                <img src="assets/fotos/inicioBIM.png">
+                <img src="assets/fotos/solicitudesBIM.png">
+            </div>
+        </div>
 
-    <div class="card">
-      <h3 data-lang-key="proj3Title">Simulador GA</h3>
-      <p data-lang-key="proj3Desc">Algoritmo Genético con backend en Python/Flask y frontend en React/Vite.</p>
-      <span class="stack">Python · React · Flask</span>
-      <div class="links">
-        <a href="#" target="_blank">GitHub</a>
-      </div>
-      </div>
+        <div class="project-info">
+            <h3 data-lang-key="proj1Title">Plataforma Locativa BIM</h3>
+            <p data-lang-key="proj1Desc">Sistema MERN para gestión locativa con roles y notificaciones en tiempo real.</p>
+            <span class="stack">Node.js · React · PostgreSQL · Socket.IO</span>
+            <div class="links">
+                <a href="https://plataformabim-1.onrender.com/" target="_blank">Web Demo</a>
+                <a href="https://github.com/hymurcia/PlataformaBIM.git" target="_blank">GitHub</a>
+                <a href="https://youtu.be/Jn5Y7xUJ2Xo" target="_blank">Video Demo</a>
+            </div>
+        </div>
+    </div>
 
-    <div class="card">
-      <h3 data-lang-key="proj4Title">Agro Trader</h3>
-      <p data-lang-key="proj4Desc">E-commerce minimalista para productores de Agraz Silvestre.</p>
-      <span class="stack">HTML · CSS · JS</span>
-      <div class="links">
-        <a href="#" target="_blank">GitHub</a>
-      </div>
-    </div>
+    <!-- CARD GA -->
+    <div class="project-card">
+        <div class="project-preview">
+            <div class="slideshow horizontal" style="--count: 4;">
+                <img src="assets/fotos/AG1.png">
+                <img src="assets/fotos/AG2.png">
+                <img src="assets/fotos/AG3.png">
+                <img src="assets/fotos/AG4.png">
+            </div>
+        </div>
 
-  </div>
+        <div class="project-info">
+            <h3 data-lang-key="proj3Title">Simulador GA</h3>
+            <p data-lang-key="proj3Desc">Algoritmo Genético con backend en Python/Flask y frontend en React/Vite.</p>
+            <span class="stack">Python · React · Flask</span>
+            <div class="links">
+                <a href="https://algoritmosgeneticos-1.onrender.com/" target="_blank">Web Demo</a>
+                <a href="https://github.com/hymurcia/AlgoritmosGeneticos.git" target="_blank">GitHub</a>
+                <a href="https://youtu.be/2mfa_sFbYSk" target="_blank">Video Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card">
+    <div class="project-preview">
+        <div class="slideshow horizontal" style="--count: 6;">
+            <img src="assets/fotos/AT1.png">
+            <img src="assets/fotos/AT2.png">
+            <img src="assets/fotos/AT3.png">
+            <img src="assets/fotos/AT4.png">
+            <img src="assets/fotos/AT5.png">
+            <img src="assets/fotos/AT6.png">
+            <img src="assets/fotos/AT7.png">
+        </div>
+    </div>
+
+    <div class="project-info">
+        <h3 data-lang-key="proj4Title">Agro Trader</h3>
+        <p data-lang-key="proj4Desc">E-commerce minimalista para productores de Agraz Silvestre.</p>
+        <span class="stack">HTML · CSS · JS</span>
+        <div class="links">
+            <a href="https://hymurcia.github.io/agroTrader/" target="_blank">Web Demo</a>
+            <a href="https://github.com/hymurcia/agroTrader.git" target="_blank">GitHub</a>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- CARD INDOOR WIFI -->
+    <div class="project-card">
+        <div class="project-preview phone">
+            <div class="slideshow vertical" style="--count: 3;">
+
+                <img src="assets/fotos/indoorwifi1.jpg">
+                <img src="assets/fotos/indoorwifi2.jpg">
+                <img src="assets/fotos/indoorwifi3.jpg">
+            </div>
+        </div>
+
+        <div class="project-info">
+        <h3 data-lang-key="proj2Title">IndoorWifi</h3>
+        <p data-lang-key="proj2Desc">App Android de localización indoor con Wi-Fi Fingerprinting + k-NN.</p>
+            <span class="stack">Kotlin · ML · RSSI · JSON</span>
+            <div class="links">
+                <a href="https://github.com/hymurcia/IndoorWifi.git" target="_blank">GitHub</a>
+                <a href="https://github.com/hymurcia/IndoorWifi/blob/master/IndoorWifi.apk?raw=true" target="_blank">Descargar APK</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD VOZ DEL OLVIDO -->
+    <div class="project-card">
+        <div class="project-preview phone">
+            <div class="slideshow vertical" style="--count: 3;">
+                <img src="assets/fotos/Ido1.jpg">
+                <img src="assets/fotos/Ido2.jpg">
+                <img src="assets\fotos\ldo3.jpg">
+            </div>
+        </div>
+
+        <div class="project-info">
+        <h3 data-lang-key="proj5Title">La Voz Del Olvido</h3>
+        <p data-lang-key="proj5Desc">App Android de Emisora Online y Metadata.</p>
+            <span class="stack">AppCreator24 · Webview · Streaming · JSON</span>
+            <div class="links">
+                <a href="https://play.google.com/store/apps/details?id=la.vozdelolvido&pcampaignid=web_share" target="_blank">Google Play</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
 </section>
 
-<section id="experience" class="section fade-in">
-  <h2 data-lang-key="experienceTitle">Experiencia</h2>
-  <ul>
-    <li>
-        <strong data-lang-key="expJob1Title">Desarrollador Junior</strong> – MULIEVA S.A.S. (2024–2025)
-        <p class="job-desc" data-lang-key="expJob1Desc">Participé en el desarrollo de aplicaciones web utilizando tecnologías frontend y backend, asegurando funcionalidad, rendimiento y mantenimiento del código.</p>
-    </li>
-    <li>
-        <strong data-lang-key="expJob2Title">Gestor Daviplata</strong> – Nases EST (2024–2025)
-        <p class="job-desc" data-lang-key="expJob2Desc">Acompañé usuarios en procesos de activación, validación y uso de la plataforma Daviplata. Ejecuté soporte técnico relacionado con acceso, autenticación, fallas en app y procesos digitales.</p>
-    </li>
-    <li>
-        <strong data-lang-key="expJob3Title">Técnico de Redes</strong> – IpRed Ltda (2021–2022)
-        <p class="job-desc" data-lang-key="expJob3Desc">Instalación, configuración y mantenimiento de redes inalámbricas y cableadas. Configuración de radioenlaces y equipos de telecomunicaciones (Mikrotik, Cisco, Cambium, etc.).</p>
-    </li>
-  </ul>
-</section>
+
 
 <section id="contact" class="section fade-in">
-  <h2 data-lang-key="contactTitle">Contacto</h2>
-  <p data-lang-key="contactEmail">Email: <a href="mailto:hyms2003@gmail.com">hyms2003@gmail.com</a></p>
-  <p data-lang-key="contactLinkedIn">LinkedIn: <a href="https://linkedin.com/in/hernanmurcia" target="_blank">Perfil</a></p>
-  <p data-lang-key="contactGitHub">GitHub: <a href="https://github.com/hymurcia/hymurcia.github.io" target="_blank">Repositorio</a></p>
+    <h2 class="contact-title" data-lang-key="contactTitle">Contacto</h2>
+
+    <div class="contact-container">
+
+        <h3 class="contact-name">HERNAN YESSID MURCIA SALINAS</h3>
+        <p class="contact-phone">+57 314 316 9575</p>
+
+        <a class="contact-item whatsapp" href="https://wa.me/573143169575" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+
+        <a class="contact-item email" href="mailto:hyms2003@gmail.com">
+            <i class="fa-solid fa-envelope"></i> hyms2003@gmail.com
+        </a>
+
+        <a class="contact-item linkedin" href="https://linkedin.com/in/hernanmurcia" target="_blank">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+
+        <a class="contact-item github" href="https://github.com/hymurcia" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a>
+
+    </div>
 </section>
 
-<footer>
-  <p data-lang-key="footerText">© Hernán Murcia - 2025</p>
+
+
+<footer class="footer">
+  <p id="footerText" data-lang-key="footerText">© Hernán Murcia - 2025</p>
 </footer>
+
 
 </body>
 </html>

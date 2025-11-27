@@ -9,15 +9,22 @@ export const translations = {
     navProjects: { es: "Proyectos", en: "Projects" },
     navExperience: { es: "Experiencia", en: "Experience" },
     navContact: { es: "Contacto", en: "Contact" },
-    
+
     // HERO SECTION
     heroFixedPrefix: { es: "Soy", en: "I am" },
     heroSubtitle: { 
-        
         es: "Desarrollo soluciones escalables, eficientes y enfocadas en la experiencia del usuario.", 
         en: "I develop scalable, efficient, and user-experience-focused solutions." 
     },
-    downloadCV: { es: "Descargar CV", en: "Download CV" },
+    downloadCV: {
+    es: "Descargar CV (ES)",
+    en: "Download CV (ES)"
+},
+
+downloadCVEnglish: {
+    es: "Descargar CV (EN)",
+    en: "Download CV (EN)"
+},
 
     // ABOUT SECTION
     aboutTitle: { es: "Sobre mí", en: "About Me" },
@@ -37,30 +44,58 @@ export const translations = {
 
     // EXPERIENCE SECTION
     experienceTitle: { es: "Experiencia", en: "Experience" },
+
+    // Fechas
+    expJob1Date: { es: "Jun 2024 – May 2025", en: "Jun 2024 – May 2025" },
+    expJob2Date: { es: "Dic 2024 – Feb 2025", en: "Dec 2024 – Feb 2025" },
+    expJob3Date: { es: "Jun 2021 – Jun 2023", en: "Jun 2021 – Jun 2023" },
+
     expJob1Title: { es: "Desarrollador Junior", en: "Junior Developer" },
-    expJob1Desc: { es: "Participé en el desarrollo de aplicaciones web utilizando tecnologías frontend y backend. Implementé APIs en Node.js/Express y funcionalidades en Python/Flask, colaborando en el diseño de interfaces con React, React Router y Tailwind CSS.", en: "I participated in web application development using frontend and backend technologies. Implemented APIs in Node.js/Express and features in Python/Flask, collaborating on interface design with React, React Router, and Tailwind CSS." },
+    expJob1Desc: { 
+        es: "Participé en el desarrollo de aplicaciones web utilizando tecnologías frontend y backend. Implementé APIs en Node.js/Express y funcionalidades en Python/Flask, colaborando en el diseño de interfaces con React, React Router y Tailwind CSS.", 
+        en: "I participated in web application development using frontend and backend technologies. Implemented APIs in Node.js/Express and features in Python/Flask, collaborating on interface design with React, React Router, and Tailwind CSS."
+    },
+
     expJob2Title: { es: "Gestor Daviplata", en: "Daviplata Manager" },
-    expJob2Desc: { es: "Acompañé usuarios en procesos de activación, validación y uso de la plataforma Daviplata. Ejecuté soporte técnico relacionado con acceso, autenticación y fallas en app.", en: "I supported users in activation and usage processes for the Daviplata platform. Executed technical support related to access, authentication, and app failures." },
+    expJob2Desc: { 
+        es: "Acompañé usuarios en procesos de activación, validación y uso de la plataforma Daviplata. Ejecuté soporte técnico relacionado con acceso, autenticación y fallas en app.", 
+        en: "I supported users in activation and usage processes for the Daviplata platform. Executed technical support related to access, authentication, and app failures."
+    },
+
     expJob3Title: { es: "Técnico de Redes", en: "Network Technician" },
-    expJob3Desc: { es: "Instalación, configuración y mantenimiento de redes inalámbricas y cableadas. Configuración de radioenlaces y equipos de telecomunicaciones (Mikrotik, Cisco, Cambium, etc.).", en: "Installation, configuration, and maintenance of wireless and wired networks. Configuration of radio links and telecommunication equipment (Mikrotik, Cisco, Cambium, etc.)." },
-    
+    expJob3Desc: { 
+        es: "Instalación, configuración y mantenimiento de redes inalámbricas y cableadas. Configuración de radioenlaces y equipos de telecomunicaciones (Mikrotik, Cisco, Cambium, etc.).", 
+        en: "Installation, configuration, and maintenance of wireless and wired networks. Configuration of radio links and telecommunication equipment (Mikrotik, Cisco, Cambium, etc.)."
+    },
+
     // PROJECTS SECTION
     projectsTitle: { es: "Proyectos", en: "Projects" },
     proj1Title: { es: "Plataforma Locativa BIM", en: "BIM Locative Platform" },
     proj1Desc: { es: "Sistema MERN para gestión locativa con roles y notificaciones en tiempo real.", en: "MERN system for locative management with roles and real-time notifications." },
+
     proj2Title: { es: "IndoorWifi", en: "IndoorWifi" },
     proj2Desc: { es: "App Android de localización indoor con Wi-Fi Fingerprinting + k-NN.", en: "Android indoor location app using Wi-Fi Fingerprinting + k-NN." },
+
     proj3Title: { es: "Simulador GA", en: "GA Simulator" },
     proj3Desc: { es: "Algoritmo Genético con backend en Python/Flask y frontend en React/Vite.", en: "Genetic Algorithm with Python/Flask backend and React/Vite frontend." },
+
     proj4Title: { es: "Agro Trader", en: "Agro Trader" },
     proj4Desc: { es: "E-commerce minimalista para productores de Agraz Silvestre.", en: "Minimalist E-commerce for Wild Grape (Agraz Silvestre) producers." },
-    
+
+    proj5Title: { es: "La Voz del Olvido", en: "The Voice of Oblivion" },
+    proj5Desc: { es: "App Android de Emisora Online y Metadata.", en: "Android app for Online Radio and Metadata." },
+
     // CONTACT SECTION
     contactTitle: { es: "Contacto", en: "Contact" },
-    contactEmail: { es: "Email:", en: "Email:" },
-    contactLinkedIn: { es: "LinkedIn:", en: "LinkedIn:" },
-    contactGitHub: { es: "GitHub:", en: "GitHub:" },
-    
+    contactName: { es: "HERNAN YESSID MURCIA SALINAS", en: "HERNAN YESSID MURCIA SALINAS" },
+
+    phoneLabel: { es: "Teléfono:", en: "Phone:" },
+    whatsappLabel: { es: "WhatsApp", en: "WhatsApp" },
+    emailLabel: { es: "Correo", en: "Email" },
+    linkedinLabel: { es: "LinkedIn", en: "LinkedIn" },
+    githubLabel: { es: "GitHub", en: "GitHub" },
+
+
     // FOOTER
     footerText: { es: "© Hernán Murcia - 2025", en: "© Hernán Murcia - 2025" }
 };
