@@ -4,6 +4,8 @@ export const translations = {
     name: { es: "HERNÁN MURCIA", en: "HERNÁN MURCIA" },
 
     // NAVEGACIÓN
+    navHome: { es: "Inicio", en: "Home" },
+
     navAbout: { es: "Sobre mí", en: "About" },
     navSkills: { es: "Habilidades", en: "Skills" },
     navProjects: { es: "Proyectos", en: "Projects" },
