@@ -10,6 +10,7 @@ export const translations = {
     navSkills: { es: "Habilidades", en: "Skills" },
     navProjects: { es: "Proyectos", en: "Projects" },
     navExperience: { es: "Experiencia", en: "Experience" },
+    navEducation: { es: "Educación", en: "Education" },
     navContact: { es: "Contacto", en: "Contact" },
 
     // HERO SECTION
@@ -46,7 +47,38 @@ downloadCVEnglish: {
 
     // EXPERIENCE SECTION
     experienceTitle: { es: "Experiencia", en: "Experience" },
+// EDUCATION & CERTIFICATIONS SECTION
+    educationTitle: { es: "Educación", en: "Education" },
+    certificationsTitle: { es: "Certificaciones", en: "Certifications" },
 
+    // Educación
+    eduItem1Title: { es: "Ingeniero de Sistemas y Computación", en: "Systems and Computation Engineer" },
+    eduItem1Date: { es: "Junio 2021 – Marzo 2026", en: "June 2021 – March 2026" },
+    eduItem1Desc: { es: "Universidad de Cundinamarca | Facatativá, Colombia", en: "University of Cundinamarca | Facatativá, Colombia" },
+
+    eduItem2Title: { es: "Bachiller Académico", en: "Academic Bachelor" },
+    eduItem2Date: { es: "Diciembre 2020", en: "December 2020" },
+    eduItem2Desc: { es: "Institución Educativa Alfonso Vanegas Sierra | San Miguel de Sema, Colombia", en: "Alfonso Vanegas Sierra Educational Institution | San Miguel de Sema, Colombia" },
+
+    // Certificaciones
+    certItem1Title: { es: "Fundamentos del Networking Profesional", en: "Networking Professional Foundations" },
+    certItem1Date: { es: "Noviembre 2024", en: "November 2024" },
+    certItem1Desc: { es: "LinkedIn Learning | Avalado por PMI®", en: "LinkedIn Learning | Endorsed by PMI®" },
+
+    certItem2Title: { es: "Mantenimiento del Sistema Electrico de la Motocicleta", en: "Motorcycle Electrical System Maintenance" },
+    certItem2Date: { es: "Junio 2023 - Julio 2023", en: "June 2023 - July 2023" },
+    certItem2Desc: { es: "SENA | San Miguel de Sema, Colombia", en: "SENA | San Miguel de Sema, Colombia" },
+
+    certItem3Title: { es: "Mantenimiento Preventivo de Motocicletas y Motocarros", en: "Preventive Maintenance of Motorcycles", },
+    certItem3Date: { es: "Junio 2023 - Julio 2023", en: "June 2023 - July 2023" },
+    certItem3Desc: { es: "SENA | San Miguel de Sema, Colombia", en: "SENA | San Miguel de Sema, Colombia" },
+
+    certItem4Title: { es: "Curso En Comunicación En Inglés", en: "English Communication Course" },
+    certItem4Date: { es: "Noviembre 2017 – Diciembre 2017", en: "November 2017 – December 2017" },
+    certItem4Desc: { es: "SENA | San Miguel de Sema, Colombia", en: "SENA | San Miguel de Sema, Colombia" },
+    
+    viewCertificate: { es: "Ver Certificado", en: "View Certificate" },
+    viewDiploma: { es: "Ver Diploma", en: "View Certificate" },
     // Fechas
     expJob1Date: { es: "Jun 2024 – May 2025", en: "Jun 2024 – May 2025" },
     expJob2Date: { es: "Dic 2024 – Feb 2025", en: "Dec 2024 – Feb 2025" },
