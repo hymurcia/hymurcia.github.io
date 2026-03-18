@@ -51,6 +51,8 @@ downloadCVEnglish: {
     expJob1Date: { es: "Jun 2024 – May 2025", en: "Jun 2024 – May 2025" },
     expJob2Date: { es: "Dic 2024 – Feb 2025", en: "Dec 2024 – Feb 2025" },
     expJob3Date: { es: "Jun 2021 – Jun 2023", en: "Jun 2021 – Jun 2023" },
+    expJob4Date: { es: "Ene 2026 – Feb 2026", en: "Jan 2026 – Feb 2026" },
+    expJob5Date: { es: "Mar 2026 – Actual", en: "Mar 2026 – Present" },
 
     expJob1Title: { es: "Desarrollador Junior", en: "Junior Developer" },
     expJob1Desc: { 
@@ -69,6 +71,8 @@ downloadCVEnglish: {
         es: "Instalación, configuración y mantenimiento de redes inalámbricas y cableadas. Configuración de radioenlaces y equipos de telecomunicaciones (Mikrotik, Cisco, Cambium, etc.).", 
         en: "Installation, configuration, and maintenance of wireless and wired networks. Configuration of radio links and telecommunication equipment (Mikrotik, Cisco, Cambium, etc.)."
     },
+
+    viewCertificate: { es: "Ver Certificado", en: "View Certificate" },
 
     // PROJECTS SECTION
     projectsTitle: { es: "Proyectos", en: "Projects" },
