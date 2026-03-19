@@ -40,8 +40,8 @@ langToggle.addEventListener('click', () => {
 
 const modeToggle = document.getElementById("mode-toggle");
 
-// Asegura que el estado del modo oscuro se preserve
-document.body.classList.toggle("dark", localStorage.getItem('darkMode') === 'true');
+// Modo oscuro por defecto en primera visita, respeta preferencia guardada
+document.body.classList.toggle("dark", localStorage.getItem('darkMode') !== 'false');
 modeToggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 
 
