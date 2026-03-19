@@ -3,11 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-lang-key="pageTitle" >Hernán Murcia - Portafolio</title>
+<title>Hernán Murcia - Ingeniero de Sistemas | Full Stack Developer</title>
+    <meta name="description" content="Portafolio de Hernán Murcia, Ingeniero de Sistemas y Full Stack Developer especializado en React, Node.js, Python, cloud y redes. Desarrollo soluciones escalables y eficientes.">
+    <meta name="keywords" content="Hernán Murcia, Ingeniero de Sistemas, Full Stack Developer, React, Node.js, Python, JavaScript, TypeScript, PostgreSQL, MongoDB, AWS, Azure, Docker, portafolio, desarrollo web">
+    <meta name="author" content="Hernán Murcia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hymurcia.github.io/">
+    <meta name="theme-color" content="#008cff">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hymurcia.github.io/">
+    <meta property="og:title" content="Hernán Murcia - Ingeniero de Sistemas | Full Stack Developer">
+    <meta property="og:description" content="Portafolio de Hernán Murcia, Ingeniero de Sistemas y Full Stack Developer especializado en React, Node.js, Python, cloud y redes.">
+    <meta property="og:image" content="https://hymurcia.github.io/assets/fotos/Foto.JPG">
+    <meta property="og:site_name" content="Hernán Murcia - Portafolio">
+    <meta property="og:locale" content="es_CO">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://hymurcia.github.io/">
+    <meta name="twitter:title" content="Hernán Murcia - Ingeniero de Sistemas | Full Stack Developer">
+    <meta name="twitter:description" content="Portafolio de Hernán Murcia, Ingeniero de Sistemas y Full Stack Developer especializado en React, Node.js, Python, cloud y redes.">
+    <meta name="twitter:image" content="https://hymurcia.github.io/assets/fotos/Foto.JPG">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23008cff'/%3E%3Cstop offset='100%25' stop-color='%2300e1ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='white' text-anchor='middle'%3EHM%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     
@@ -15,20 +36,21 @@
 </head>
 
 <body>
+<a href="#about" class="skip-nav">Saltar al contenido</a>
 <div class="electro-cascade" aria-hidden="true"></div>
 
 <header>
-    <div id="hamburger" class="hamburger">☰</div>
+    <button id="hamburger" class="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="side-menu">☰</button>
 
     <h1 class="logo">HERNAN MURCIA</h1>
 
     <div class="controls">
-        <button id="lang-toggle">EN</button>
-        <button id="mode-toggle">🌙</button>
+        <button id="lang-toggle" aria-label="Cambiar idioma">EN</button>
+        <button id="mode-toggle" aria-label="Cambiar modo oscuro">🌙</button>
     </div>
 </header>
 
-<div id="side-menu" class="side-menu">
+<nav id="side-menu" class="side-menu" aria-label="Menú de navegación">
     <a data-lang-key="navHome" href="#top">Inicio</a>
     <a data-lang-key="navAbout" href="#about">Sobre mí</a>
     <a data-lang-key="navExperience" href="#experience">Experiencia</a>
@@ -36,7 +58,7 @@
     <a data-lang-key="navEducation" href="#education">Educación</a>
     <a data-lang-key="navSkills" href="#skills">Habilidades</a>
     <a data-lang-key="navContact" href="#contact">Contacto</a>
-</div>
+</nav>
 
 <div id="overlay" class="overlay"></div>
 
@@ -53,7 +75,7 @@
         <a href="assets/documents/CV HERNAN MURCIA 1002629999 FULL.pdf" class="btn-download" data-lang-key="downloadCV">
             <i class="fa-solid fa-download"></i> Descargar CV (ES)
         </a>
-        <a href="assets\documents\CV EN HERNAN MURCIA 1002629999 FULL.pdf" class="btn-download alt" data-lang-key="downloadCVEnglish">
+        <a href="assets/documents/CV EN HERNAN MURCIA 1002629999 FULL.pdf" class="btn-download" data-lang-key="downloadCVEnglish">
             <i class="fa-solid fa-download"></i> Download CV (EN)
         </a>
     </div>
@@ -72,46 +94,46 @@
 
 <section id="experience" class="section fade-in">
   <h2 data-lang-key="experienceTitle">Experiencia</h2>
-  <ul>
+  <ul>
     <li>
-        <strong data-lang-key="expJob2Title"></strong> – 
+        <strong data-lang-key="expJob2Title"></strong> <span class="company">@ NASES EST</span> – 
         <span data-lang-key="expJob5Date"></span>
         <p class="job-desc" data-lang-key="expJob2Desc"></p>
         <div class="experience-links">
-            <a href="assets\ExperienciaLaboral\GestorDaviplata3Actual.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank"></a>
+            <a href="assets/ExperienciaLaboral/GestorDaviplata3Actual.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank"></a>
         </div>
     </li>
     <li>
-        <strong data-lang-key="expJob2Title"></strong> – 
+        <strong data-lang-key="expJob2Title"></strong> <span class="company">@ NASES EST</span> – 
         <span data-lang-key="expJob4Date"></span>
         <p class="job-desc" data-lang-key="expJob2Desc"></p>
         <div class="experience-links">
-            <a href="assets\ExperienciaLaboral\GestorDaviplata2.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank"></a>
+            <a href="assets/ExperienciaLaboral/GestorDaviplata2.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank"></a>
         </div>
     </li>
 
     <li>
-        <strong data-lang-key="expJob1Title"></strong> – 
+        <strong data-lang-key="expJob1Title"></strong> <span class="company">@ MULIEVA S.A.S</span> – 
         <span data-lang-key="expJob1Date"></span>
         <p class="job-desc" data-lang-key="expJob1Desc"></p>
     </li>
     <li>
-        <strong data-lang-key="expJob2Title"></strong> – 
+        <strong data-lang-key="expJob2Title"></strong> <span class="company">@ NASES EST</span> – 
         <span data-lang-key="expJob2Date"></span>
         <p class="job-desc" data-lang-key="expJob2Desc"></p>
         <div class="experience-links">
-            <a href="assets\ExperienciaLaboral\GestorDaviplata1.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank"></a>
+            <a href="assets/ExperienciaLaboral/GestorDaviplata1.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank"></a>
         </div>
     </li>
     <li>
-        <strong data-lang-key="expJob3Title"></strong> – 
+        <strong data-lang-key="expJob3Title"></strong> <span class="company">@ IpRedLtda</span> – 
         <span data-lang-key="expJob3Date"></span>
         <p class="job-desc" data-lang-key="expJob3Desc"></p>
         <div class="experience-links">
-            <a href="assets\ExperienciaLaboral\RedesIpRed.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank"></a>
+            <a href="assets/ExperienciaLaboral/RedesIpRed.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank"></a>
         </div>
     </li>
-  </ul>
+  </ul>
 </section>
 <section id="projects" class="section fade-in">
   <h2 data-lang-key="projectsTitle">Proyectos</h2>
@@ -121,10 +143,10 @@
     <!-- CARD -->
     <div class="project-card">
         <div class="project-preview">
-            <div class="slideshow horizontal" style="--count: 2;">
+            <div class="slideshow horizontal" style="--count: 2;" aria-label="Capturas de Plataforma BIM">
 
-                <img src="assets/fotos/inicioBIM.png">
-                <img src="assets/fotos/solicitudesBIM.png">
+                <img src="assets/fotos/inicioBIM.png" alt="Pantalla de inicio Plataforma BIM">
+                <img src="assets/fotos/solicitudesBIM.png" alt="Panel de solicitudes Plataforma BIM">
             </div>
         </div>
 
@@ -133,9 +155,9 @@
             <p data-lang-key="proj1Desc">Sistema MERN para gestión locativa con roles y notificaciones en tiempo real.</p>
             <span class="stack">Node.js · React · PostgreSQL · Socket.IO</span>
             <div class="links">
-                <a href="https://plataformabim-1.onrender.com/" target="_blank">Web Demo</a>
-                <a href="https://github.com/hymurcia/PlataformaBIM.git" target="_blank">GitHub</a>
-                <a href="https://youtu.be/Jn5Y7xUJ2Xo" target="_blank">Video Demo</a>
+                <a href="https://plataformabim-1.onrender.com/" target="_blank" aria-label="Ver demo de Plataforma BIM"><i class="fa-solid fa-globe"></i> Web Demo</a>
+                <a href="https://github.com/hymurcia/PlataformaBIM.git" target="_blank" aria-label="Ver código de Plataforma BIM en GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://youtu.be/Jn5Y7xUJ2Xo" target="_blank" aria-label="Ver video demo de Plataforma BIM"><i class="fa-brands fa-youtube"></i> Video Demo</a>
             </div>
         </div>
     </div>
@@ -143,11 +165,11 @@
     <!-- CARD GA -->
     <div class="project-card">
         <div class="project-preview">
-            <div class="slideshow horizontal" style="--count: 4;">
-                <img src="assets/fotos/AG1.png">
-                <img src="assets/fotos/AG2.png">
-                <img src="assets/fotos/AG3.png">
-                <img src="assets/fotos/AG4.png">
+            <div class="slideshow horizontal" style="--count: 4;" aria-label="Capturas de Simulador GA">
+                <img src="assets/fotos/AG1.png" alt="Simulador GA - Vista principal">
+                <img src="assets/fotos/AG2.png" alt="Simulador GA - Configuración">
+                <img src="assets/fotos/AG3.png" alt="Simulador GA - Resultados">
+                <img src="assets/fotos/AG4.png" alt="Simulador GA - Gráficos">
             </div>
         </div>
 
@@ -156,23 +178,23 @@
             <p data-lang-key="proj3Desc">Algoritmo Genético con backend en Python/Flask y frontend en React/Vite.</p>
             <span class="stack">Python · React · Flask</span>
             <div class="links">
-                <a href="https://algoritmosgeneticos-1.onrender.com/" target="_blank">Web Demo</a>
-                <a href="https://github.com/hymurcia/AlgoritmosGeneticos.git" target="_blank">GitHub</a>
-                <a href="https://youtu.be/2mfa_sFbYSk" target="_blank">Video Demo</a>
+                <a href="https://algoritmosgeneticos-1.onrender.com/" target="_blank" aria-label="Ver demo de Simulador GA"><i class="fa-solid fa-globe"></i> Web Demo</a>
+                <a href="https://github.com/hymurcia/AlgoritmosGeneticos.git" target="_blank" aria-label="Ver código de Simulador GA en GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://youtu.be/2mfa_sFbYSk" target="_blank" aria-label="Ver video demo de Simulador GA"><i class="fa-brands fa-youtube"></i> Video Demo</a>
             </div>
         </div>
     </div>
 
     <div class="project-card">
     <div class="project-preview">
-        <div class="slideshow horizontal" style="--count: 6;">
-            <img src="assets/fotos/AT1.png">
-            <img src="assets/fotos/AT2.png">
-            <img src="assets/fotos/AT3.png">
-            <img src="assets/fotos/AT4.png">
-            <img src="assets/fotos/AT5.png">
-            <img src="assets/fotos/AT6.png">
-            <img src="assets/fotos/AT7.png">
+        <div class="slideshow horizontal" style="--count: 6;" aria-label="Capturas de Agro Trader">
+            <img src="assets/fotos/AT1.png" alt="Agro Trader - Página principal">
+            <img src="assets/fotos/AT2.png" alt="Agro Trader - Catálogo de productos">
+            <img src="assets/fotos/AT3.png" alt="Agro Trader - Detalle de producto">
+            <img src="assets/fotos/AT4.png" alt="Agro Trader - Carrito de compras">
+            <img src="assets/fotos/AT5.png" alt="Agro Trader - Checkout">
+            <img src="assets/fotos/AT6.png" alt="Agro Trader - Contacto">
+            <img src="assets/fotos/AT7.png" alt="Agro Trader - Footer">
         </div>
     </div>
 
@@ -181,8 +203,8 @@
         <p data-lang-key="proj4Desc">E-commerce minimalista para productores de Agraz Silvestre.</p>
         <span class="stack">HTML · CSS · JS</span>
         <div class="links">
-            <a href="https://hymurcia.github.io/agroTrader/" target="_blank">Web Demo</a>
-            <a href="https://github.com/hymurcia/agroTrader.git" target="_blank">GitHub</a>
+            <a href="https://hymurcia.github.io/agroTrader/" target="_blank" aria-label="Ver demo de Agro Trader"><i class="fa-solid fa-globe"></i> Web Demo</a>
+            <a href="https://github.com/hymurcia/agroTrader.git" target="_blank" aria-label="Ver código de Agro Trader en GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
         </div>
     </div>
 </div>
@@ -192,11 +214,11 @@
     <!-- CARD INDOOR WIFI -->
     <div class="project-card">
         <div class="project-preview phone">
-            <div class="slideshow vertical" style="--count: 3;">
+            <div class="slideshow vertical" style="--count: 3;" aria-label="Capturas de IndoorWifi">
 
-                <img src="assets/fotos/indoorwifi1.jpg">
-                <img src="assets/fotos/indoorwifi2.jpg">
-                <img src="assets/fotos/indoorwifi3.jpg">
+                <img src="assets/fotos/indoorwifi1.jpg" alt="IndoorWifi - Pantalla de escaneo">
+                <img src="assets/fotos/indoorwifi2.jpg" alt="IndoorWifi - Mapa de calor">
+                <img src="assets/fotos/indoorwifi3.jpg" alt="IndoorWifi - Resultados de localización">
             </div>
         </div>
 
@@ -205,8 +227,8 @@
         <p data-lang-key="proj2Desc">App Android de localización indoor con Wi-Fi Fingerprinting + k-NN.</p>
             <span class="stack">Kotlin · ML · RSSI · JSON</span>
             <div class="links">
-                <a href="https://github.com/hymurcia/IndoorWifi.git" target="_blank">GitHub</a>
-                <a href="https://github.com/hymurcia/IndoorWifi/blob/master/IndoorWifi.apk?raw=true" target="_blank">Descargar APK</a>
+                <a href="https://github.com/hymurcia/IndoorWifi.git" target="_blank" aria-label="Ver código de IndoorWifi en GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://github.com/hymurcia/IndoorWifi/blob/master/IndoorWifi.apk?raw=true" target="_blank" aria-label="Descargar APK de IndoorWifi"><i class="fa-solid fa-download"></i> Descargar APK</a>
             </div>
         </div>
     </div>
@@ -214,10 +236,10 @@
     <!-- CARD VOZ DEL OLVIDO -->
     <div class="project-card">
         <div class="project-preview phone">
-            <div class="slideshow vertical" style="--count: 3;">
-                <img src="assets/fotos/Ido1.jpg">
-                <img src="assets/fotos/Ido2.jpg">
-                <img src="assets\fotos\ldo3.jpg">
+            <div class="slideshow vertical" style="--count: 3;" aria-label="Capturas de La Voz Del Olvido">
+                <img src="assets/fotos/Ido1.jpg" alt="La Voz Del Olvido - Pantalla principal">
+                <img src="assets/fotos/Ido2.jpg" alt="La Voz Del Olvido - Reproductor">
+                <img src="assets/fotos/ldo3.jpg" alt="La Voz Del Olvido - Metadata">
             </div>
         </div>
 
@@ -226,7 +248,7 @@
         <p data-lang-key="proj5Desc">App Android de Emisora Online y Metadata.</p>
             <span class="stack">AppCreator24 · Webview · Streaming · JSON</span>
             <div class="links">
-                <a href="https://play.google.com/store/apps/details?id=la.vozdelolvido&pcampaignid=web_share" target="_blank">Google Play</a>
+                <a href="https://play.google.com/store/apps/details?id=la.vozdelolvido&pcampaignid=web_share" target="_blank" aria-label="Descargar La Voz Del Olvido en Google Play"><i class="fa-brands fa-google-play"></i> Google Play</a>
             </div>
         </div>
     </div>
@@ -250,7 +272,7 @@
             <strong data-lang-key="eduItem2Title">Bachiller Académico</strong> – <span data-lang-key="eduItem2Date">Dic 2020</span>
             <p class="job-desc" data-lang-key="eduItem2Desc">Institución Educativa Alfonso Vanegas Sierra | San Miguel de Sema, Colombia</p>
             <div class="experience-links">
-                <a href="assets\Educacion\DiplomaActaGrado.pdf" class="btn-download alt" data-lang-key="viewDiploma" target="_blank">Ver Diploma</a>
+                <a href="assets/Educacion/DiplomaActaGrado.pdf" class="btn-download alt" data-lang-key="viewDiploma" target="_blank">Ver Diploma</a>
             </div>
         </li>
     </ul>
@@ -271,21 +293,21 @@
             <strong data-lang-key="certItem2Title">Mantenimiento del Sistema Electrico de la Motocicleta</strong> – <span data-lang-key="certItem2Date">2023</span>
             <p class="job-desc" data-lang-key="certItem2Desc">SENA | San Miguel de Sema, Colombia</p>
             <div class="experience-links">
-                <a href="assets\Educacion\MANTENIMIENTOELECTRICO.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank">Ver Certificado</a>
+                <a href="assets/Educacion/MANTENIMIENTOELECTRICO.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank">Ver Certificado</a>
             </div>
         </li>
         <li>
             <strong data-lang-key="certItem3Title">Mmantenimiento Preventivo De Motocicletas Y Motocarros</strong> – <span data-lang-key="certItem3Date">2023</span>
             <p class="job-desc" data-lang-key="certItem3Desc">SENA | San Miguel de Sema, Colombia</p>
             <div class="experience-links">
-                <a href="assets\Educacion\MANTENIMIENTOPREVENTIVO.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank">Ver Certificado</a>
+                <a href="assets/Educacion/MANTENIMIENTOPREVENTIVO.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank">Ver Certificado</a>
             </div>
         </li>
         <li>
             <strong data-lang-key="certItem4Title">Comunicación En Inglés</strong> – <span data-lang-key="certItem4Date">2017</span>
             <p class="job-desc" data-lang-key="certItem4Desc">SENA | San Miguel de Sema, Colombia</p>
             <div class="experience-links">
-                <a href="assets\Educacion\COMUNICACION_INGLES.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank">Ver Certificado</a>
+                <a href="assets/Educacion/COMUNICACION_INGLES.pdf" class="btn-download alt" data-lang-key="viewCertificate" target="_blank">Ver Certificado</a>
             </div>
         </li>
     </ul>
@@ -294,62 +316,62 @@
 <section id="skills" class="section fade-in">
     <h2 data-lang-key="skillsTitle">Habilidades</h2>
 <div class="skills-grid">
-    <div class="skill-category">
+        <div class="skill-category">
         <h3>Backend</h3>
         <div class="icon-list">
-            <figure><img src="https://cdn.worldvectorlogo.com/logos/jee-3.svg" alt="Java"><figcaption>Java</figcaption></figure>
-            <figure><img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="C#" style="width:48px;height:48px;"><figcaption>C# / .NET</figcaption></figure>
-            <figure><img src="https://cdn.worldvectorlogo.com/logos/dot-net-core-7.svg" alt=".NET Core"><figcaption>.NET Core</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js"><figcaption>Node.js</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/express/000000" alt="Express"><figcaption>Express</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python"><figcaption>Python</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/flask/000000" alt="Flask"><figcaption>Flask</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP"><figcaption>PHP</figcaption></figure>
-            <figure><img src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg" alt="JWT"><figcaption>JWT / bcrypt</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/socketdotio/010101" alt="Socket.IO"><figcaption>Socket.IO</figcaption></figure>
-            <figure><img src="https://simpleicons.org/icons/googledocs.svg" alt="PDF"><figcaption>PDF / PDFKit</figcaption></figure>
-            <figure><img src="https://www.svgrepo.com/show/144828/jsp-file-format-symbol.svg" alt="JSP"><figcaption>JSP</figcaption></figure>
+            <figure data-skill="Java"><img src="https://cdn.worldvectorlogo.com/logos/jee-3.svg" alt="Java"><figcaption>Java</figcaption></figure>
+            <figure data-skill="C# / .NET"><img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="C#" style="width:48px;height:48px;"><figcaption>C# / .NET</figcaption></figure>
+            <figure data-skill=".NET Core"><img src="https://cdn.worldvectorlogo.com/logos/dot-net-core-7.svg" alt=".NET Core"><figcaption>.NET Core</figcaption></figure>
+            <figure data-skill="Node.js"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js"><figcaption>Node.js</figcaption></figure>
+            <figure data-skill="Express"><img src="https://cdn.simpleicons.org/express/000000" alt="Express"><figcaption>Express</figcaption></figure>
+            <figure data-skill="Python"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python"><figcaption>Python</figcaption></figure>
+            <figure data-skill="Flask"><img src="https://cdn.simpleicons.org/flask/000000" alt="Flask"><figcaption>Flask</figcaption></figure>
+            <figure data-skill="PHP"><img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP"><figcaption>PHP</figcaption></figure>
+            <figure data-skill="JWT / bcrypt"><img src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg" alt="JWT"><figcaption>JWT / bcrypt</figcaption></figure>
+            <figure data-skill="Socket.IO"><img src="https://cdn.simpleicons.org/socketdotio/010101" alt="Socket.IO"><figcaption>Socket.IO</figcaption></figure>
+            <figure data-skill="PDF / PDFKit"><img src="https://simpleicons.org/icons/googledocs.svg" alt="PDF"><figcaption>PDF / PDFKit</figcaption></figure>
+            <figure data-skill="JSP"><img src="https://www.svgrepo.com/show/144828/jsp-file-format-symbol.svg" alt="JSP"><figcaption>JSP</figcaption></figure>
         </div>
     </div>
 
     <div class="skill-category">
         <h3>Frontend</h3>
         <div class="icon-list">
-            <figure><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5"><figcaption>HTML</figcaption></figure>
-            <figure><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3"><figcaption>CSS</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript"><figcaption>JavaScript</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript"><figcaption>TypeScript</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React"><figcaption>React</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/angular/DD0031" alt="Angular"><figcaption>Angular</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind"><figcaption>Tailwind</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootstrap"><figcaption>Bootstrap</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/axios/5A29E4" alt="Axios"><figcaption>Axios</figcaption></figure>
+            <figure data-skill="HTML5"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5"><figcaption>HTML</figcaption></figure>
+            <figure data-skill="CSS3"><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3"><figcaption>CSS</figcaption></figure>
+            <figure data-skill="JavaScript"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript"><figcaption>JavaScript</figcaption></figure>
+            <figure data-skill="TypeScript"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript"><figcaption>TypeScript</figcaption></figure>
+            <figure data-skill="React"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React"><figcaption>React</figcaption></figure>
+            <figure data-skill="Angular"><img src="https://cdn.simpleicons.org/angular/DD0031" alt="Angular"><figcaption>Angular</figcaption></figure>
+            <figure data-skill="Tailwind CSS"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind"><figcaption>Tailwind</figcaption></figure>
+            <figure data-skill="Bootstrap"><img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootstrap"><figcaption>Bootstrap</figcaption></figure>
+            <figure data-skill="Axios"><img src="https://cdn.simpleicons.org/axios/5A29E4" alt="Axios"><figcaption>Axios</figcaption></figure>
         </div>
     </div>
 
     <div class="skill-category">
         <h3>Databases</h3>
         <div class="icon-list">
-            <figure><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL"><figcaption>PostgreSQL</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB"><figcaption>MongoDB</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL"><figcaption>MySQL</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/mariadb/003545" alt="MariaDB"><figcaption>MariaDB</figcaption></figure>
-            <figure><img src="https://www.svgrepo.com/show/508811/dbs-sqlserver.svg" alt="SQL Server"><figcaption>SQL Server</figcaption></figure>
-            <figure><img src="https://cdn.worldvectorlogo.com/logos/oracle-6.svg" alt="Oracle"><figcaption>Oracle</figcaption></figure>
+            <figure data-skill="PostgreSQL"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL"><figcaption>PostgreSQL</figcaption></figure>
+            <figure data-skill="MongoDB"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB"><figcaption>MongoDB</figcaption></figure>
+            <figure data-skill="MySQL"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL"><figcaption>MySQL</figcaption></figure>
+            <figure data-skill="MariaDB"><img src="https://cdn.simpleicons.org/mariadb/003545" alt="MariaDB"><figcaption>MariaDB</figcaption></figure>
+            <figure data-skill="SQL Server"><img src="https://www.svgrepo.com/show/508811/dbs-sqlserver.svg" alt="SQL Server"><figcaption>SQL Server</figcaption></figure>
+            <figure data-skill="Oracle"><img src="https://cdn.worldvectorlogo.com/logos/oracle-6.svg" alt="Oracle"><figcaption>Oracle</figcaption></figure>
         </div>
     </div>
 
     <div class="skill-category">
         <h3>Cloud & DevOps</h3>
         <div class="icon-list">
-            <figure><img src="https://cdn.simpleicons.org/git/F05032" alt="Git"><figcaption>Git</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/github/181717" alt="GitHub"><figcaption>GitHub</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker"><figcaption>Docker</figcaption></figure>
-            <figure><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS"><figcaption>AWS</figcaption></figure>
-            <figure><img src="https://cdn.worldvectorlogo.com/logos/azure-2.svg" alt="Azure"><figcaption>Azure</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman"><figcaption>Postman</figcaption></figure>
-            <figure><img src="https://cdn.worldvectorlogo.com/logos/scrum-1.svg" alt="Scrum"><figcaption>Scrum</figcaption></figure>
-            <figure><img src="https://cdn.simpleicons.org/sap/0FAAFF" alt="SAP"><figcaption>SAP</figcaption></figure>
+            <figure data-skill="Git"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git"><figcaption>Git</figcaption></figure>
+            <figure data-skill="GitHub"><img src="https://cdn.simpleicons.org/github/181717" alt="GitHub"><figcaption>GitHub</figcaption></figure>
+            <figure data-skill="Docker"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker"><figcaption>Docker</figcaption></figure>
+            <figure data-skill="AWS"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS"><figcaption>AWS</figcaption></figure>
+            <figure data-skill="Azure"><img src="https://cdn.worldvectorlogo.com/logos/azure-2.svg" alt="Azure"><figcaption>Azure</figcaption></figure>
+            <figure data-skill="Postman"><img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman"><figcaption>Postman</figcaption></figure>
+            <figure data-skill="Scrum"><img src="https://cdn.worldvectorlogo.com/logos/scrum-1.svg" alt="Scrum"><figcaption>Scrum</figcaption></figure>
+            <figure data-skill="SAP"><img src="https://cdn.simpleicons.org/sap/0FAAFF" alt="SAP"><figcaption>SAP</figcaption></figure>
         </div>
     </div>
 
@@ -358,20 +380,20 @@
         <div class="skill-category networks-box">
             <h3>Networks</h3>
             <div class="icon-list">
-                <figure><img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco"><figcaption>Cisco</figcaption></figure>
-                <figure><img src="https://cdn.simpleicons.org/tplink/00AAE5" alt="TP-Link"><figcaption>TP-Link</figcaption></figure>
-                <figure><img src="https://simpleicons.org/icons/mikrotik.svg" alt="Mikrotik" ><figcaption>Mikrotik</figcaption></figure>
-                <figure><img src="https://www.svgrepo.com/show/499815/network-server.svg" alt="Networking"><figcaption>Networking</figcaption></figure>              
+                <figure data-skill="Cisco"><img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco"><figcaption>Cisco</figcaption></figure>
+                <figure data-skill="TP-Link"><img src="https://cdn.simpleicons.org/tplink/00AAE5" alt="TP-Link"><figcaption>TP-Link</figcaption></figure>
+                <figure data-skill="Mikrotik"><img src="https://simpleicons.org/icons/mikrotik.svg" alt="Mikrotik" ><figcaption>Mikrotik</figcaption></figure>
+                <figure data-skill="Networking"><img src="https://www.svgrepo.com/show/499815/network-server.svg" alt="Networking"><figcaption>Networking</figcaption></figure>              
             </div>
         </div>
 
         <div class="skill-category mobile-ml-box">
             <h3>Mobile & ML</h3>
             <div class="icon-list">
-                <figure><img src="https://cdn.simpleicons.org/kotlin/7F52FF" alt="Kotlin"><figcaption>Kotlin</figcaption></figure>
-                <figure><img src="https://cdn.simpleicons.org/android/3DDC84" alt="Android"><figcaption>Android</figcaption></figure>
-                <figure><img src="https://www.svgrepo.com/show/339330/machine-learning-03.svg" alt="ML"><figcaption>Machine Learning</figcaption></figure>
-                <figure><img src="https://www.svgrepo.com/show/447866/ai-mi-algorithm.svg" alt="Algorithms"><figcaption>Algorithms</figcaption></figure>
+                <figure data-skill="Kotlin"><img src="https://cdn.simpleicons.org/kotlin/7F52FF" alt="Kotlin"><figcaption>Kotlin</figcaption></figure>
+                <figure data-skill="Android"><img src="https://cdn.simpleicons.org/android/3DDC84" alt="Android"><figcaption>Android</figcaption></figure>
+                <figure data-skill="Machine Learning"><img src="https://www.svgrepo.com/show/339330/machine-learning-03.svg" alt="ML"><figcaption>Machine Learning</figcaption></figure>
+                <figure data-skill="Algorithms"><img src="https://www.svgrepo.com/show/447866/ai-mi-algorithm.svg" alt="Algorithms"><figcaption>Algorithms</figcaption></figure>
             </div>
         </div>
     </div>
@@ -412,7 +434,7 @@
 
 
 <footer class="footer">
-  <p id="footerText" data-lang-key="footerText">© Hernán Murcia - 2025</p>
+  <p id="footerText" data-lang-key="footerText">© Hernán Murcia - 2026</p>
 </footer>
 
 

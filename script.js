@@ -124,25 +124,10 @@ document.addEventListener("DOMContentLoaded", () => {
 const backToTopButton = document.createElement('button');
 backToTopButton.innerHTML = '⬆️';
 backToTopButton.id = 'back-to-top';
+backToTopButton.setAttribute('aria-label', 'Volver al inicio de la página');
 document.body.appendChild(backToTopButton);
 
-// Estilos del botón flotante (mejor moverlos a style.css)
-backToTopButton.style.cssText = `
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--accent);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 100;
-`;
+
 
 backToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -184,12 +169,15 @@ const overlay = document.getElementById("overlay");
 hamburger.addEventListener("click", () => {
     sideMenu.classList.toggle("open");
     overlay.classList.toggle("active");
+    const isOpen = sideMenu.classList.contains("open");
+    hamburger.setAttribute("aria-expanded", isOpen);
 });
 
 // Cerrar al hacer clic fuera
 overlay.addEventListener("click", () => {
     sideMenu.classList.remove("open");
     overlay.classList.remove("active");
+    hamburger.setAttribute("aria-expanded", "false");
 });
 
 // Cerrar el menú al hacer clic en cualquier enlace del menú
@@ -198,6 +186,7 @@ menuLinks.forEach(link => {
     link.addEventListener('click', () => {
         sideMenu.classList.remove("open");
         overlay.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
     });
 });
 
