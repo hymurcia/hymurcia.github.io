@@ -91,7 +91,7 @@ viewCVES: {
     expJob2Date: { es: "Dic 2024 – Feb 2025", en: "Dec 2024 – Feb 2025" },
     expJob3Date: { es: "Jun 2021 – Jun 2023", en: "Jun 2021 – Jun 2023" },
     expJob4Date: { es: "Ene 2026 – Feb 2026", en: "Jan 2026 – Feb 2026" },
-    expJob5Date: { es: "Mar 2026 – Actual", en: "Mar 2026 – Present" },
+    expJob5Date: { es: "Mar 2026 – May 2026", en: "Mar 2026 – May 2026" },
 
     expJob1Title: { es: "Desarrollador Junior", en: "Junior Developer" },
     expJob1Desc: { 
