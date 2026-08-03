@@ -20,13 +20,12 @@ export const translations = {
         en: "I develop scalable, efficient, and user-experience-focused solutions." 
     },
     downloadCV: {
-    es: "Descargar CV (ES)",
-    en: "Download CV (ES)"
+    es: "Descargar CV",
+    en: "Download CV"
 },
-
-downloadCVEnglish: {
-    es: "Descargar CV (EN)",
-    en: "Download CV (EN)"
+viewCVES: {
+    es: "Ver CV Español",
+    en: "View CV Spanish"
 },
 
     // ABOUT SECTION
@@ -47,7 +46,15 @@ downloadCVEnglish: {
 
     // EXPERIENCE SECTION
     experienceTitle: { es: "Experiencia", en: "Experience" },
-// EDUCATION & CERTIFICATIONS SECTION
+
+    // PROFESSIONAL SECTION
+    professionalTitle: { es: "Idoneidad Profesional", en: "Professional Eligibility" },
+    professionalSubtitle: { es: "Ingeniero de Sistemas y Computación", en: "Systems and Computation Engineer" },
+    professionalMatricula: { es: "Matrícula:", en: "License:" },
+    professionalStatus: { es: "Vigente", en: "Active" },
+    verifyBtn: { es: "Verificar Antecedentes", en: "Verify Background" },
+
+    // EDUCATION & CERTIFICATIONS SECTION
     educationTitle: { es: "Educación", en: "Education" },
     certificationsTitle: { es: "Certificaciones", en: "Certifications" },
 
